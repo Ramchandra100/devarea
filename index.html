@@ -198,6 +198,12 @@
     .carousel-indicators .active {
         background-color: #4e54c8;
     }
+    @media (max-width: 767px) {
+        .carousel-inner{
+            flex-direction: row;
+    }
+
+    }
     </style>
 </head>
 <body>
@@ -532,6 +538,790 @@
     </div>
 </section>
 
+<!-- Add to head -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+    .recommends-section {
+        padding: 100px 0;
+        background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .coverflow-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+    }
+    
+    .swiper {
+        width: 100%;
+        padding: 50px 0;
+    }
+    
+    .swiper-slide {
+        width: 300px;
+        height: 400px;
+        transition: all 0.5s ease;
+        transform-style: preserve-3d;
+    }
+    
+    .swiper-slide-active {
+        transform: scale(1.05);
+        z-index: 10;
+    }
+    
+    .swiper-slide-prev {
+        transform: rotateY(15deg) translateX(-30px) scale(0.95);
+        opacity: 0.8;
+    }
+    
+    .swiper-slide-next {
+        transform: rotateY(-15deg) translateX(30px) scale(0.95);
+        opacity: 0.8;
+    }
+    
+    .recommend-card {
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        transition: all 0.5s ease;
+        position: relative;
+    }
+    
+    .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .card-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgba(0,0,0,0.7);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        z-index: 2;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .card-content h4 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    
+    .card-content p {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .explore-btn {
+        display: inline-block;
+        padding: 8px 20px;
+        background: #4e54c8;
+        color: white;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .explore-btn:hover {
+        background: #4348a8;
+        transform: translateY(-2px);
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background: #4e54c8;
+        border-radius: 50%;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        background: #4348a8;
+        transform: scale(1.1);
+    }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+        .swiper-slide {
+            width: 250px;
+            height: 380px;
+        }
+        
+        .card-image {
+            height: 160px;
+        }
+        
+        .coverflow-container {
+            padding: 0 20px;
+        }
+    }
+</style>
+
+<!-- HTML Section -->
+<section class="recommends-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 fw-bold mb-3">Top Recommends</h2>
+                <p class="lead">Experience our premium selection of destinations</p>
+            </div>
+        </div>
+
+        <div class="coverflow-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="recommend-card">
+                            <div class="position-relative">
+                                <img src="images/tree.jpg" class="card-image" alt="Destination">
+                                <span class="card-badge">24 Places</span>
+                            </div>
+                            <div class="card-content">
+                                <h4>Skyline Of Lower Manhattan</h4>
+                                <p>Iconic views from multiple vantage points across the city that never sleeps.</p>
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="recommend-card">
+                            <div class="position-relative">
+                                <img src="images/tree.jpg" class="card-image" alt="Destination">
+                                <span class="card-badge">18 Places</span>
+                            </div>
+                            <div class="card-content">
+                                <h4>Ancient Redwood Forests</h4>
+                                <p>Walk among giants in these majestic forests that have stood for centuries.</p>
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="recommend-card">
+                            <div class="position-relative">
+                                <img src="images/tree.jpg" class="card-image" alt="Destination">
+                                <span class="card-badge">22 Places</span>
+                            </div>
+                            <div class="card-content">
+                                <h4>Coastal Cliff Views</h4>
+                                <p>Dramatic ocean vistas from towering cliffs along pristine coastlines.</p>
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="recommend-card">
+                            <div class="position-relative">
+                                <img src="images/tree.jpg" class="card-image" alt="Destination">
+                                <span class="card-badge">15 Places</span>
+                            </div>
+                            <div class="card-content">
+                                <h4>Mountain Lake Retreats</h4>
+                                <p>Crystal clear alpine lakes surrounded by towering mountain peaks.</p>
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="recommend-card">
+                            <div class="position-relative">
+                                <img src="images/tree.jpg" class="card-image" alt="Destination">
+                                <span class="card-badge">30 Places</span>
+                            </div>
+                            <div class="card-content">
+                                <h4>Desert Canyon Adventures</h4>
+                                <p>Explore the stunning geology of these ancient desert landscapes.</p>
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper('.mySwiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            initialSlide: 2, // Start with third slide centered
+            loop: true, // Enable infinite looping
+            autoplay: {
+                delay: 3000, // Auto-slide every 3 seconds
+                disableOnInteraction: false, // Continue autoplay after user interaction
+            },
+            speed: 800, // Smooth transition speed
+            coverflowEffect: {
+                rotate: 5, // Slight rotation for side slides
+                stretch: -50, // Bring slides closer together
+                depth: 150, // Depth perspective
+                modifier: 2, // Effect intensity
+                slideShadows: false, // Disable shadows for cleaner look
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // Mobile breakpoint
+                320: {
+                    coverflowEffect: {
+                        rotate: 10, // More rotation on mobile
+                        stretch: -30, // Less stretch on small screens
+                        depth: 100, // Less depth on mobile
+                        modifier: 1.5, // Reduced effect intensity
+                    }
+                },
+                // Tablet breakpoint
+                768: {
+                    coverflowEffect: {
+                        rotate: 5,
+                        stretch: -50,
+                        depth: 150,
+                        modifier: 2,
+                    }
+                },
+                // Desktop breakpoint
+                1024: {
+                    coverflowEffect: {
+                        rotate: 5,
+                        stretch: -80, // More stretch on desktop
+                        depth: 200, // More depth on larger screens
+                        modifier: 2.5,
+                    }
+                }
+            },
+            // Custom transitions for smoother 3D effect
+            on: {
+                init: function() {
+                    // Add perspective to container
+                    document.querySelector('.swiper').style.perspective = '1200px';
+                },
+                slideChange: function() {
+                    // Enhance active slide appearance
+                    const activeSlide = this.slides[this.activeIndex];
+                    activeSlide.style.transition = 'all 0.6s ease-out';
+                }
+            }
+        });
+
+        // Pause autoplay when hovering over slider
+        const swiperEl = document.querySelector('.mySwiper');
+        swiperEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
+        swiperEl.addEventListener('mouseleave', () => swiper.autoplay.start());
+    });
+</script>
+
+
+<!-- footer section -->
+ <!-- Footer CSS -->
+<style>
+    /* Footer Base */
+    .site-footer {
+        background: #1a1a2e;
+        color: #fff;
+        padding: 60px 0 0;
+        font-family: 'Segoe UI', sans-serif;
+        position: relative;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Footer Grid */
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    /* Branding Section */
+    .footer-brand {
+        max-width: 250px;
+    }
+    
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer-logo img {
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    .footer-logo span {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+    }
+    
+    .tagline {
+        color: rgba(255,255,255,0.7);
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    /* Navigation Links */
+    .footer-nav h3 {
+        color: #fff;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    .footer-nav h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 2px;
+        background: #4e54c8;
+    }
+    
+    .footer-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-nav li {
+        margin-bottom: 12px;
+    }
+    
+    .footer-nav a {
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        position: relative;
+    }
+    
+    .footer-nav a:hover {
+        color: #fff;
+        transform: translateX(5px);
+    }
+    
+    .footer-nav a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background: #4e54c8;
+        transition: width 0.3s ease;
+    }
+    
+    .footer-nav a:hover::after {
+        width: 100%;
+    }
+    
+    /* Contact Info */
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        color: rgba(255,255,255,0.7);
+    }
+    
+    .contact-item i {
+        margin-right: 10px;
+        color: #4e54c8;
+        font-size: 1.1rem;
+        margin-top: 3px;
+    }
+    
+    .chat-btn {
+        display: inline-flex;
+        align-items: center;
+        background: #4e54c8;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 30px;
+        text-decoration: none;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        width: fit-content;
+    }
+    
+    .chat-btn i {
+        margin-right: 8px;
+        color: white;
+    }
+    
+    .chat-btn:hover {
+        background: #4348a8;
+        transform: translateY(-2px);
+    }
+    
+    /* Social Media */
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        color: white;
+        transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+        background: #4e54c8;
+        transform: translateY(-3px);
+    }
+    
+    /* Newsletter */
+    .newsletter h3 {
+        color: #fff;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    .newsletter h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 2px;
+        background: #4e54c8;
+    }
+    
+    .newsletter p {
+        color: rgba(255,255,255,0.7);
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    
+    .newsletter-form {
+        display: flex;
+        position: relative;
+    }
+    
+    .newsletter-input {
+        flex: 1;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 30px 0 0 30px;
+        font-size: 0.9rem;
+        outline: none;
+    }
+    
+    .newsletter-btn {
+        background: #4e54c8;
+        color: white;
+        border: none;
+        padding: 0 20px;
+        border-radius: 0 30px 30px 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .newsletter-btn:hover {
+        background: #4348a8;
+    }
+    
+    .success-message {
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        color: #4e54c8;
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    /* Language Selector */
+    .language-selector {
+        margin-top: 20px;
+    }
+    
+    .language-selector select {
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .language-selector select:hover {
+        border-color: #4e54c8;
+    }
+    
+    /* Footer Bottom */
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .legal-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .legal-links a {
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+    }
+    
+    .legal-links a:hover {
+        color: #4e54c8;
+    }
+    
+    .copyright {
+        color: rgba(255,255,255,0.5);
+        font-size: 0.8rem;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .footer-brand {
+            max-width: 100%;
+        }
+        
+        .newsletter-form {
+            flex-direction: column;
+        }
+        
+        .newsletter-input {
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+        
+        .newsletter-btn {
+            border-radius: 30px;
+            padding: 12px;
+        }
+        
+        .legal-links {
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+    }
+</style>
+
+<!-- Footer HTML -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- Branding Column -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Anna Travels">
+                    <span>ANNA</span>
+                </div>
+                <p class="tagline">Explore the World with Us - Unforgettable journeys crafted just for you</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <!-- Navigation Columns -->
+            <div class="footer-nav">
+                <h3>Destinations</h3>
+                <ul>
+                    <li><a href="#">Europe</a></li>
+                    <li><a href="#">Asia</a></li>
+                    <li><a href="#">North America</a></li>
+                    <li><a href="#">South America</a></li>
+                    <li><a href="#">Africa</a></li>
+                    <li><a href="#">Oceania</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-nav">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Travel Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Column -->
+            <div class="footer-nav">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Travel Street, Wanderlust City, WC 10001</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@annatravels.com</span>
+                    </div>
+                    <a href="#" class="chat-btn">
+                        <i class="fas fa-comment-dots"></i>
+                        Live Chat
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Newsletter Column -->
+            <div class="footer-nav newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get travel tips, exclusive offers, and destination inspiration straight to your inbox.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="success-message" id="successMessage">Thank you for subscribing!</div>
+                </form>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select aria-label="Language selector">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <div class="copyright">
+                &copy; <span id="currentYear"></span> Anna Travels. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate submission
+            setTimeout(() => {
+                newsletterForm.reset();
+                successMessage.style.opacity = '1';
+                
+                // Hide message after 3 seconds
+                setTimeout(() => {
+                    successMessage.style.opacity = '0';
+                }, 3000);
+            }, 500);
+        });
+        
+        // Language selector change
+        const languageSelector = document.querySelector('.language-selector select');
+        languageSelector.addEventListener('change', function() {
+            // In a real implementation, this would change the site language
+            console.log('Language changed to:', this.value);
+        });
+    });
+</script>
+
     
 
     <!-- Bootstrap JS Bundle with Popper -->
@@ -571,6 +1361,7 @@
             });
         });
     </script>
+
     <script>
 
     // Initialize carousel with auto-slide and pause on hover
