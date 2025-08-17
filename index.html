@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Triangles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <style>
+        .navbar {
+            transition: background-color 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar,
+        .navbar .nav-link,
+        .navbar .navbar-brand,
+        .navbar .dropdown-menu,
+        .navbar .dropdown-item {
+            color: #fff !important;
+            font-weight: bold !important;
+        }
+
+        /* Add focus states for accessibility */
+        .navbar .nav-link:focus,
+        .navbar .dropdown-item:focus,
+        .navbar-toggler:focus {
+            outline: 2px solid rgba(255, 193, 7, 0.5);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Optimized Navbar -->
+    <nav class="navbar navbar-expand-lg bg-secondary text-warning py-lg-0 shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/023/654/784/small_2x/golden-logo-template-free-png.png"
+                    height="40" alt="Travel Logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#top-navbar" aria-label="Toggle navigation">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end bg-secondary" tabindex="-1" id="top-navbar">
+                <div class="offcanvas-header justify-content-end">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item px-lg-2">
+                            <a class="nav-link active" href="#" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item dropdown px-lg-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#">Adventure Tours</a></li>
+                                <li><a class="dropdown-item" href="#">Hotel Bookings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Custom Packages</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-lg-2">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item px-lg-2">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item ps-lg-3 mt-3 mt-lg-0">
+                            <a class="btn btn-warning fw-bold" href="#">Book Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
