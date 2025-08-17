@@ -71,6 +71,20 @@
             width: calc(100% - 30px);
         }
 
+
+        @media (max-width: 991px) {
+            .navbar-collapse{
+                height: 100vh;
+            }
+            .navbar-nav {
+                padding-top: 40%;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+        }
+
         /* <!-- For Client Stories Section --> */
     .client-stories {
         padding: 100px 0;
@@ -122,6 +136,68 @@
         bottom: -10px;
         left: 0;
     }
+
+    /* <!-- places-section --> */
+    .places-section {
+        padding: 100px 0;
+        background: white;
+        position: relative;
+        overflow: hidden;
+    }
+    .place-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transition: all 0.4s ease;
+        margin: 0 10px;
+        height: 100%;
+    }
+    .place-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    .place-img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .place-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #4e54c8;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+    .carousel-control-prev, .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        background: #4e54c8;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+    .carousel-control-prev {
+        left: -25px;
+    }
+    .carousel-control-next {
+        right: -25px;
+    }
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(78, 84, 200, 0.3);
+        border: none;
+        margin: 0 5px;
+    }
+    .carousel-indicators .active {
+        background-color: #4e54c8;
+    }
     </style>
 </head>
 <body>
@@ -134,7 +210,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item animate__animated animate__fadeInDown" style="animation-delay: 0.1s;">
                         <a class="nav-link active" href="#">Home</a>
@@ -148,11 +224,11 @@
                     <li class="nav-item animate__animated animate__fadeInDown" style="animation-delay: 0.4s;">
                         <a class="nav-link" href="#">Portfolio</a>
                     </li>
-                    <li class="nav-item animate__animated animate__fadeInDown" style="animation-delay: 0.5s;">
+                    <li class="nav-item mb-5 mb-lg-0 animate__fadeInDown" style="animation-delay: 0.5s;">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
-                <button class="btn btn-primary ms-lg-3 animate__animated animate__fadeInRight" style="animation-delay: 0.6s;">Get Started</button>
+                <button class="btn btn-primary ms-lg-3 mb-2 animate__fadeInRight" style="animation-delay: 0.6s;">Get Started</button>
             </div>
         </div>
     </nav>
@@ -174,7 +250,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block animate__animated animate__fadeInRight">
-                    <img src="https://via.placeholder.com/600x400" alt="Hero Image" class="img-fluid rounded shadow-lg">
+                    <img src="images/car1.png" alt="Hero Image" class="img-fluid rounded">
                 </div>
             </div>
         </div>
@@ -264,6 +340,198 @@
     </div>
 </section>
 
+<!-- Best Places to Visit Section -->
+<section class="places-section">
+    <!-- Decorative elements matching hero -->
+    <div class="hero-bg-element" style="width: 150px; height: 150px; top: -50px; left: -50px;"></div>
+    <div class="hero-bg-element" style="width: 100px; height: 100px; bottom: -30px; right: -30px;"></div>
+    
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 fw-bold mb-3 section-title animate__animated" data-animate="animate__fadeInDown">Best Places to Visit</h2>
+                <p class="lead animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.2s;">Discover the most breathtaking destinations</p>
+            </div>
+        </div>
+
+        <div id="placesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <!-- Place 1 -->
+                        <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.3s;">
+                            <div class="place-card">
+                                <div class="position-relative">
+                                    <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" class="place-img" alt="Architecture">
+
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="mb-2">Swiss Alps</h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <small class="text-muted">Switzerland</small>
+                                    </div>
+                                    <p class="mb-3">Breathtaking mountain views with world-class skiing and hiking trails.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <small class="ms-1">4.9</small>
+                                        </div>
+                                        <a href="#" class="btn btn-sm btn-primary">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Place 2 -->
+                        <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.4s;">
+                            <div class="place-card">
+                                <div class="position-relative">
+                                    <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" class="place-img" alt="Architecture">
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="mb-2">Maldives</h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <small class="text-muted">Indian Ocean</small>
+                                    </div>
+                                    <p class="mb-3">Crystal clear waters with overwater bungalows and white sandy beaches.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <small class="ms-1">4.8</small>
+                                        </div>
+                                        <a href="#" class="btn btn-sm btn-primary">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Place 3 -->
+                        <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.5s;">
+                            <div class="place-card">
+                                <div class="position-relative">
+                                    <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" class="place-img" alt="Architecture">
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="mb-2">Tokyo</h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <small class="text-muted">Japan</small>
+                                    </div>
+                                    <p class="mb-3">Vibrant city blending ultramodern and traditional culture.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <small class="ms-1">4.7</small>
+                                        </div>
+                                        <a href="#" class="btn btn-sm btn-primary">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <!-- Place 4 -->
+                        <div class="col-md-4">
+                            <div class="place-card">
+                                <div class="position-relative">
+                                    <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" class="place-img" alt="Architecture">
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="mb-2">Sahara Desert</h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <small class="text-muted">Africa</small>
+                                    </div>
+                                    <p class="mb-3">Experience the vast golden dunes and unique desert culture.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <small class="ms-1">4.6</small>
+                                        </div>
+                                        <a href="#" class="btn btn-sm btn-primary">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Place 5 -->
+                        <div class="col-md-4">
+                            <div class="place-card">
+                                <div class="position-relative">
+                                    <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" class="place-img" alt="Architecture">
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="mb-2">Amazon Rainforest</h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <small class="text-muted">South America</small>
+                                    </div>
+                                    <p class="mb-3">Lush biodiversity with incredible wildlife and river systems.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <small class="ms-1">4.9</small>
+                                        </div>
+                                        <a href="#" class="btn btn-sm btn-primary">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Place 6 -->
+                        <div class="col-md-4">
+                            <div class="place-card">
+                                <div class="position-relative">
+                                    <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" class="place-img" alt="Architecture">
+                                    <span class="place-badge">History</span>
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="mb-2">Rome</h4>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                        <small class="text-muted">Italy</small>
+                                    </div>
+                                    <p class="mb-3">Ancient ruins and Renaissance art in the Eternal City.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rating">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <small class="ms-1">4.8</small>
+                                        </div>
+                                        <a href="#" class="btn btn-sm btn-primary">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#placesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#placesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            
+            <!-- Indicators -->
+            <div class="carousel-indicators position-relative mt-4">
+                <button type="button" data-bs-target="#placesCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#placesCarousel" data-bs-slide-to="1"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
     
 
     <!-- Bootstrap JS Bundle with Popper -->
@@ -303,5 +571,29 @@
             });
         });
     </script>
+    <script>
+
+    // Initialize carousel with auto-slide and pause on hover
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = new bootstrap.Carousel('#placesCarousel', {
+            interval: 3000, // 3 seconds delay
+            ride: 'carousel',
+            wrap: true,
+            pause: 'hover' // Pause on hover
+        });
+
+        // Add smooth transition between slides
+        const carouselInner = document.querySelector('#placesCarousel .carousel-inner');
+        carouselInner.style.transition = 'transform 0.7s ease-in-out';
+        
+        // Restart auto-cycling when user manually changes slide
+        const carouselControls = document.querySelectorAll('[data-bs-slide]');
+        carouselControls.forEach(control => {
+            control.addEventListener('click', function() {
+                carousel.cycle();
+            });
+        });
+    });
+</script>
 </body>
 </html>
