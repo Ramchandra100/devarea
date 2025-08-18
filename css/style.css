@@ -451,3 +451,153 @@
                 margin-top: 30px;
             }
         }
+
+/* Why Choose Us Section CSS */
+        .why-choose-us {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span {
+            color: var(--primary-color);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            bottom: -10px;
+            left: 25%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+            transition: all 0.5s ease;
+        }
+        
+        .section-header:hover .section-title::after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        .section-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 25px;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover .card-icon {
+            transform: rotateY(180deg);
+        }
+        
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #212121;
+            margin-bottom: 15px;
+        }
+        
+        .card-text {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            color: #444444;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .why-choose-us {
+                padding: 80px 0;
+                background-attachment: scroll;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .benefit-card {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .why-choose-us {
+                padding: 60px 0;
+            }
+            
+            .section-header {
+                margin-bottom: 40px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .card-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            
+            .card-title {
+                font-size: 1.2rem;
+            }
+        }
