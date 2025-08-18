@@ -1,11 +1,31 @@
- // Close mobile menu when clicking on a link
-    document.querySelectorAll('#navbarContent .nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            const navbarCollapse = document.getElementById('navbarContent');
-            if (navbarCollapse.classList.contains('show')) {
-                bootstrap.Collapse.getInstance(navbarCollapse).hide();
+//navbar section js
+        // Sticky navbar on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
         });
-    });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Initialize animations after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add more initialization code here if needed
+        });
 
-    
+         // Hero Section JS
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add any hero-specific JS here if needed
+        });

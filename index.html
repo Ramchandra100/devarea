@@ -1,757 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Bootstrap Navbar & Hero</title>
-
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Animate.css for animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
-     <!-- Icons by Font Awesome - https://fontawesome.com/ -->
+    <title>Trip Triangles Tours & Travels</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Best Places Section -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
-   
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.7);">
+    <!-- Navbar Section-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand animate__animated animate__fadeInLeft" href="#">
-                <span style="font-weight: 700; color: #4e54c8;">Trip Triangles</span>
+            <!-- Brand/Logo -->
+            <a class="navbar-brand" href="#">
+                <div class="logo-placeholder">
+                    <span>TT</span>
+                </div>
+                <div class="brand-text">
+                    <span class="company-name">Trip Triangles</span>
+                    <span class="tagline">Your Journey, Our Responsibility!!!</span>
+                </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse text-center" id="navbarNav">
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item animate__animated animate__fadeInDown" style="animation-delay: 0.1s;">
-                        <a class="nav-link active" href="#">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:1">Home</a>
                     </li>
-                    <li class="nav-item animate__animated animate__fadeInDown" style="animation-delay: 0.2s;">
-                        <a class="nav-link" href="#">Features</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:2">About Us</a>
                     </li>
-                    <li class="nav-item animate__animated animate__fadeInDown" style="animation-delay: 0.3s;">
-                        <a class="nav-link" href="#">Services</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:3">Services</a>
                     </li>
-                    <li class="nav-item animate__animated animate__fadeInDown" style="animation-delay: 0.4s;">
-                        <a class="nav-link" href="#">Portfolio</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="fleetDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="--i:4">
+                            Fleet
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="fleetDropdown">
+                            <li><a class="dropdown-item" href="#">Sedan</a></li>
+                            <li><a class="dropdown-item" href="#">SUV</a></li>
+                            <li><a class="dropdown-item" href="#">Luxury</a></li>
+                            <li><a class="dropdown-item" href="#">Traveller</a></li>
+                            <li><a class="dropdown-item" href="#">Mini Bus</a></li>
+                            <li><a class="dropdown-item" href="#">Bus</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item mb-5 mb-lg-0 animate__fadeInDown" style="animation-delay: 0.5s;">
-                        <a class="nav-link" href="#">Contact</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:5">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:6">Contact Us</a>
                     </li>
                 </ul>
-                <button class="btn btn-primary ms-lg-3 mb-2 animate__fadeInRight" style="animation-delay: 0.6s;">Get
-                    Started</button>
+                
+                <!-- CTA Buttons -->
+                <div class="btn-container ms-lg-3">
+                    <a href="#" class="btn btn-signin me-2">Sign In</a>
+                    <a href="#" class="btn btn-signup">Sign Up</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <!-- Background elements -->
-        <div class="hero-bg-element" style="width: 300px; height: 300px; top: -100px; left: -100px;"></div>
-        <div class="hero-bg-element" style="width: 200px; height: 200px; bottom: -50px; right: -50px;"></div>
-
-        <div class="container hero-content">
+     <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 animate__animated animate__fadeInUp">
-                    <h1 class="display-4 fw-bold mb-4">Create Amazing Digital Experiences</h1>
-                    <p class="lead mb-4">Anna helps you build beautiful websites and applications with modern
-                        technologies and stunning designs.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#"
-                            class="btn btn-primary btn-lg px-4 animate__animated animate__pulse animate__infinite">Explore
-                            More</a>
-                        <a href="#" class="btn btn-outline-light btn-lg px-4">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 d-none d-lg-block animate__animated animate__fadeInRight">
-                    <img src="images/car1.png" alt="Hero Image" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Stories Section -->
-    <section class="client-stories">
-        <!-- Decorative elements matching hero -->
-        <div class="hero-bg-element" style="width: 150px; height: 150px; top: -50px; right: -50px;"></div>
-        <div class="hero-bg-element" style="width: 100px; height: 100px; bottom: -30px; left: -30px;"></div>
-
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="display-5 fw-bold mb-3 section-title animate__animated"
-                        data-animate="animate__fadeInDown">Client Success Stories</h2>
-                    <p class="lead animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.2s;">
-                        Trusted by businesses worldwide</p>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <!-- Story 1 -->
-                <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.3s;">
-                    <div class="story-card">
-                        <i class="fas fa-quote-right quote-icon"></i>
-                        <div class="d-flex align-items-center mb-4">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="client-img me-3"
-                                alt="Sarah">
-                            <div>
-                                <h5 class="mb-0">Sarah Johnson</h5>
-                                <p class="text-muted mb-0">CEO, TechSolutions</p>
+                <!-- Left Column - Content -->
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Explore Our Verified & Professional <span>Cars</span></h1>
+                        <p class="hero-subtext">Modern design sports cruisers for those who crave adventure & grandeur cars for relaxing with your loved ones.</p>
+                        
+                        <div class="trust-badge mb-4">
+                            <div class="avatars">
+                                <div class="avatar"></div>
+                                <div class="avatar"></div>
+                                <div class="avatar"></div>
+                                <span>6K+ Customers have used our services</span>
                             </div>
                         </div>
-                        <p class="mb-4">"Anna's team delivered exceptional results. Our website traffic increased by
-                            300% within months of launch."</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-rent">Rent a Car</a>
+                            <a href="#" class="btn btn-add">Add Your Car</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Story 2 -->
-                <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.4s;">
-                    <div class="story-card">
-                        <i class="fas fa-quote-right quote-icon"></i>
-                        <div class="d-flex align-items-center mb-4">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="client-img me-3"
-                                alt="Michael">
-                            <div>
-                                <h5 class="mb-0">Michael Chen</h5>
-                                <p class="text-muted mb-0">Marketing Director</p>
-                            </div>
+                
+                <!-- Right Column - Car Image -->
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <div class="hero-image-container">
+                        <div class="price-badge pulse-animation">
+                            Starts From ₹6500/day
                         </div>
-                        <p class="mb-4">"The mobile app they developed exceeded all our expectations. User engagement is
-                            through the roof!"</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                        <div class="availability-badge">
+                            Available for Rent
                         </div>
-                    </div>
-                </div>
-
-                <!-- Story 3 -->
-                <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.5s;">
-                    <div class="story-card">
-                        <i class="fas fa-quote-right quote-icon"></i>
-                        <div class="d-flex align-items-center mb-4">
-                            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="client-img me-3"
-                                alt="Emma">
-                            <div>
-                                <h5 class="mb-0">Emma Rodriguez</h5>
-                                <p class="text-muted mb-0">Startup Founder</p>
-                            </div>
-                        </div>
-                        <p class="mb-4">"They understood our vision perfectly and delivered ahead of schedule. Our
-                            investors were impressed!"</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <img src="https://via.placeholder.com/600x400/333333/FFFFFF?text=Premium+Car" alt="Luxury Car" class="hero-image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Best Places to Visit Section -->
-    <section class="places-section">
-        <!-- Decorative elements matching hero -->
-        <div class="hero-bg-element" style="width: 150px; height: 150px; top: -50px; left: -50px;"></div>
-        <div class="hero-bg-element" style="width: 100px; height: 100px; bottom: -30px; right: -30px;"></div>
-
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="display-5 fw-bold mb-3 section-title animate__animated"
-                        data-animate="animate__fadeInDown">Best Places to Visit</h2>
-                    <p class="lead animate__animated" data-animate="animate__fadeInUp" style="animation-delay: 0.2s;">
-                        Discover the most breathtaking destinations</p>
-                </div>
-            </div>
-
-            <div id="placesCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <!-- Place 1 -->
-                            <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp"
-                                style="animation-delay: 0.3s;">
-                                <div class="place-card">
-                                    <div class="position-relative">
-                                        <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
-                                            class="place-img" alt="Architecture">
-
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="mb-2">Swiss Alps</h4>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                            <small class="text-muted">Switzerland</small>
-                                        </div>
-                                        <p class="mb-3">Breathtaking mountain views with world-class skiing and hiking
-                                            trails.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="rating">
-                                                <i class="fas fa-star text-warning"></i>
-                                                <small class="ms-1">4.9</small>
-                                            </div>
-                                            <a href="#" class="btn btn-sm btn-primary">Explore</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Place 2 -->
-                            <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp"
-                                style="animation-delay: 0.4s;">
-                                <div class="place-card">
-                                    <div class="position-relative">
-                                        <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
-                                            class="place-img" alt="Architecture">
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="mb-2">Maldives</h4>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                            <small class="text-muted">Indian Ocean</small>
-                                        </div>
-                                        <p class="mb-3">Crystal clear waters with overwater bungalows and white sandy
-                                            beaches.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="rating">
-                                                <i class="fas fa-star text-warning"></i>
-                                                <small class="ms-1">4.8</small>
-                                            </div>
-                                            <a href="#" class="btn btn-sm btn-primary">Explore</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Place 3 -->
-                            <div class="col-md-4 animate__animated" data-animate="animate__fadeInUp"
-                                style="animation-delay: 0.5s;">
-                                <div class="place-card">
-                                    <div class="position-relative">
-                                        <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
-                                            class="place-img" alt="Architecture">
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="mb-2">Tokyo</h4>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                            <small class="text-muted">Japan</small>
-                                        </div>
-                                        <p class="mb-3">Vibrant city blending ultramodern and traditional culture.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="rating">
-                                                <i class="fas fa-star text-warning"></i>
-                                                <small class="ms-1">4.7</small>
-                                            </div>
-                                            <a href="#" class="btn btn-sm btn-primary">Explore</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <!-- Place 4 -->
-                            <div class="col-md-4">
-                                <div class="place-card">
-                                    <div class="position-relative">
-                                        <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
-                                            class="place-img" alt="Architecture">
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="mb-2">Sahara Desert</h4>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                            <small class="text-muted">Africa</small>
-                                        </div>
-                                        <p class="mb-3">Experience the vast golden dunes and unique desert culture.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="rating">
-                                                <i class="fas fa-star text-warning"></i>
-                                                <small class="ms-1">4.6</small>
-                                            </div>
-                                            <a href="#" class="btn btn-sm btn-primary">Explore</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Place 5 -->
-                            <div class="col-md-4">
-                                <div class="place-card">
-                                    <div class="position-relative">
-                                        <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
-                                            class="place-img" alt="Architecture">
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="mb-2">Amazon Rainforest</h4>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                            <small class="text-muted">South America</small>
-                                        </div>
-                                        <p class="mb-3">Lush biodiversity with incredible wildlife and river systems.
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="rating">
-                                                <i class="fas fa-star text-warning"></i>
-                                                <small class="ms-1">4.9</small>
-                                            </div>
-                                            <a href="#" class="btn btn-sm btn-primary">Explore</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Place 6 -->
-                            <div class="col-md-4">
-                                <div class="place-card">
-                                    <div class="position-relative">
-                                        <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
-                                            class="place-img" alt="Architecture">
-                                        <span class="place-badge">History</span>
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="mb-2">Rome</h4>
-                                        <div class="d-flex align-items-center mb-3">
-                                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
-                                            <small class="text-muted">Italy</small>
-                                        </div>
-                                        <p class="mb-3">Ancient ruins and Renaissance art in the Eternal City.</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="rating">
-                                                <i class="fas fa-star text-warning"></i>
-                                                <small class="ms-1">4.8</small>
-                                            </div>
-                                            <a href="#" class="btn btn-sm btn-primary">Explore</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#placesCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#placesCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
-                <!-- Indicators -->
-                <div class="carousel-indicators position-relative mt-4">
-                    <button type="button" data-bs-target="#placesCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#placesCarousel" data-bs-slide-to="1"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recommended Section -->
-    <section class="recommends-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="display-5 fw-bold mb-3">Top Recommends</h2>
-                    <p class="lead">Experience our premium selection of destinations</p>
-                </div>
-            </div>
-
-            <div class="coverflow-container">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide">
-                            <div class="recommend-card">
-                                <div class="position-relative">
-                                    <img src="images/tree.jpg" class="card-image" alt="Destination">
-                                    <span class="card-badge">24 Places</span>
-                                </div>
-                                <div class="card-content">
-                                    <h4>Skyline Of Lower Manhattan</h4>
-                                    <p>Iconic views from multiple vantage points across the city that never sleeps.</p>
-                                    <a href="#" class="explore-btn">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
-                            <div class="recommend-card">
-                                <div class="position-relative">
-                                    <img src="images/tree.jpg" class="card-image" alt="Destination">
-                                    <span class="card-badge">18 Places</span>
-                                </div>
-                                <div class="card-content">
-                                    <h4>Ancient Redwood Forests</h4>
-                                    <p>Walk among giants in these majestic forests that have stood for centuries.</p>
-                                    <a href="#" class="explore-btn">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="recommend-card">
-                                <div class="position-relative">
-                                    <img src="images/tree.jpg" class="card-image" alt="Destination">
-                                    <span class="card-badge">22 Places</span>
-                                </div>
-                                <div class="card-content">
-                                    <h4>Coastal Cliff Views</h4>
-                                    <p>Dramatic ocean vistas from towering cliffs along pristine coastlines.</p>
-                                    <a href="#" class="explore-btn">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 4 -->
-                        <div class="swiper-slide">
-                            <div class="recommend-card">
-                                <div class="position-relative">
-                                    <img src="images/tree.jpg" class="card-image" alt="Destination">
-                                    <span class="card-badge">15 Places</span>
-                                </div>
-                                <div class="card-content">
-                                    <h4>Mountain Lake Retreats</h4>
-                                    <p>Crystal clear alpine lakes surrounded by towering mountain peaks.</p>
-                                    <a href="#" class="explore-btn">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 5 -->
-                        <div class="swiper-slide">
-                            <div class="recommend-card">
-                                <div class="position-relative">
-                                    <img src="images/tree.jpg" class="card-image" alt="Destination">
-                                    <span class="card-badge">30 Places</span>
-                                </div>
-                                <div class="card-content">
-                                    <h4>Desert Canyon Adventures</h4>
-                                    <p>Explore the stunning geology of these ancient desert landscapes.</p>
-                                    <a href="#" class="explore-btn">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer HTML -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- Branding Column -->
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="Anna Travels">
-                        <span>ANNA</span>
-                    </div>
-                    <p class="tagline">Explore the World with Us - Unforgettable journeys crafted just for you</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Navigation Columns -->
-                <div class="footer-nav">
-                    <h3>Destinations</h3>
-                    <ul>
-                        <li><a href="#">Europe</a></li>
-                        <li><a href="#">Asia</a></li>
-                        <li><a href="#">North America</a></li>
-                        <li><a href="#">South America</a></li>
-                        <li><a href="#">Africa</a></li>
-                        <li><a href="#">Oceania</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-nav">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Travel Blog</a></li>
-                        <li><a href="#">Press</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Column -->
-                <div class="footer-nav">
-                    <h3>Contact</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Travel Street, Wanderlust City, WC 10001</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@annatravels.com</span>
-                        </div>
-                        <a href="#" class="chat-btn">
-                            <i class="fas fa-comment-dots"></i>
-                            Live Chat
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Newsletter Column -->
-                <div class="footer-nav newsletter">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to get travel tips, exclusive offers, and destination inspiration straight to your
-                        inbox.</p>
-                    <form class="newsletter-form" id="newsletterForm">
-                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
-                        <button type="submit" class="newsletter-btn">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                        <div class="success-message" id="successMessage">Thank you for subscribing!</div>
-                    </form>
-
-                    <!-- Language Selector -->
-                    <div class="language-selector">
-                        <select aria-label="Language selector">
-                            <option value="en">English</option>
-                            <option value="es">Español</option>
-                            <option value="fr">Français</option>
-                            <option value="de">Deutsch</option>
-                            <option value="ja">日本語</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Cookie Policy</a>
-                    <a href="#">Sitemap</a>
-                </div>
-                <div class="copyright">
-                    &copy; <span id="currentYear"></span> Anna Travels. All Rights Reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Custom JS -->
-    <script>
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Trigger animations when elements come into view
-        document.addEventListener('DOMContentLoaded', function () {
-            const animateElements = document.querySelectorAll('.animate__animated');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.visibility = 'visible';
-                        entry.target.classList.add(entry.target.dataset.animate);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            animateElements.forEach(element => {
-                element.style.visibility = 'hidden';
-                observer.observe(element);
-            });
-        });
-
-        // Initialize carousel with auto-slide and pause on hover
-        document.addEventListener('DOMContentLoaded', function () {
-            const carousel = new bootstrap.Carousel('#placesCarousel', {
-                interval: 3000, // 3 seconds delay
-                ride: 'carousel',
-                wrap: true,
-                pause: 'hover' // Pause on hover
-            });
-
-            // Add smooth transition between slides
-            const carouselInner = document.querySelector('#placesCarousel .carousel-inner');
-            carouselInner.style.transition = 'transform 0.7s ease-in-out';
-
-            // Restart auto-cycling when user manually changes slide
-            const carouselControls = document.querySelectorAll('[data-bs-slide]');
-            carouselControls.forEach(control => {
-                control.addEventListener('click', function () {
-                    carousel.cycle();
-                });
-            });
-        });
-
-        // Recommended Section Swiper Initialization
-        document.addEventListener('DOMContentLoaded', function () {
-            const swiper = new Swiper('.mySwiper', {
-                effect: 'coverflow',
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: 'auto',
-                initialSlide: 2, // Start with third slide centered
-                loop: true, // Enable infinite looping
-                autoplay: {
-                    delay: 3000, // Auto-slide every 3 seconds
-                    disableOnInteraction: false, // Continue autoplay after user interaction
-                },
-                speed: 800, // Smooth transition speed
-                coverflowEffect: {
-                    rotate: 5, // Slight rotation for side slides
-                    stretch: -50, // Bring slides closer together
-                    depth: 150, // Depth perspective
-                    modifier: 2, // Effect intensity
-                    slideShadows: false, // Disable shadows for cleaner look
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    // Mobile breakpoint
-                    320: {
-                        coverflowEffect: {
-                            rotate: 10, // More rotation on mobile
-                            stretch: -30, // Less stretch on small screens
-                            depth: 100, // Less depth on mobile
-                            modifier: 1.5, // Reduced effect intensity
-                        }
-                    },
-                    // Tablet breakpoint
-                    768: {
-                        coverflowEffect: {
-                            rotate: 5,
-                            stretch: -50,
-                            depth: 150,
-                            modifier: 2,
-                        }
-                    },
-                    // Desktop breakpoint
-                    1024: {
-                        coverflowEffect: {
-                            rotate: 5,
-                            stretch: -80, // More stretch on desktop
-                            depth: 200, // More depth on larger screens
-                            modifier: 2.5,
-                        }
-                    }
-                },
-                // Custom transitions for smoother 3D effect
-                on: {
-                    init: function () {
-                        // Add perspective to container
-                        document.querySelector('.swiper').style.perspective = '1200px';
-                    },
-                    slideChange: function () {
-                        // Enhance active slide appearance
-                        const activeSlide = this.slides[this.activeIndex];
-                        activeSlide.style.transition = 'all 0.6s ease-out';
-                    }
-                }
-            });
-
-            // Pause autoplay when hovering over slider
-            const swiperEl = document.querySelector('.mySwiper');
-            swiperEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
-            swiperEl.addEventListener('mouseleave', () => swiper.autoplay.start());
-        });
-
-        // <!-- Footer JavaScript -->
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set current year
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-            // Newsletter form submission
-            const newsletterForm = document.getElementById('newsletterForm');
-            const successMessage = document.getElementById('successMessage');
-
-            newsletterForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                // Simulate submission
-                setTimeout(() => {
-                    newsletterForm.reset();
-                    successMessage.style.opacity = '1';
-
-                    // Hide message after 3 seconds
-                    setTimeout(() => {
-                        successMessage.style.opacity = '0';
-                    }, 3000);
-                }, 500);
-            });
-
-            // Language selector change
-            const languageSelector = document.querySelector('.language-selector select');
-            languageSelector.addEventListener('change', function () {
-                // In a real implementation, this would change the site language
-                console.log('Language changed to:', this.value);
-            });
-        });
-    </script>
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/index.js"></script>
 </body>
 </html>
