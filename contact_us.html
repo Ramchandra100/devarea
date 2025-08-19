@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes Benz - Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/nav_bar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        :root {
+            --mb-primary: #0047ba;
+            --mb-secondary: #000;
+            --mb-accent: #00a0e9;
+            --mb-light: #f8f9fa;
+            --mb-gray: #6c757d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            padding-top: 20px;
+        }
+        
+        .contact-container {
+            max-width: 1500px;
+            margin: 5rem auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-header {
+            border-radius: 15px;
+            background: linear-gradient(135deg, var(--mb-primary), var(--mb-secondary));
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .contact-header h1 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .contact-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .contact-content {
+            padding: 40px;
+        }
+        
+        .contact-card {
+  background: var(--mb-light);
+  border-radius: 10px;
+  padding: 25px;
+  border-left: 4px solid var(--mb-primary);
+  height: 300px;
+  /* DELETE height: 100%; ← remove this line */
+}
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--mb-primary);
+            margin-bottom: 20px;
+        }
+        
+        .contact-card h3 {
+            color: var(--mb-secondary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a {
+            color: var(--mb-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .contact-info a:hover {
+            color: var(--mb-primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--mb-light);
+            color: var(--mb-primary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background: var(--mb-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .map-container {
+  width: 100%;
+  height: 550px;   /* keep your fixed height */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+        
+        .map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .contact-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--mb-primary), transparent);
+            margin: 40px 0;
+            border: none;
+        }
+        
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-content {
+                padding: 20px;
+            }
+            
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-card {
+                margin-bottom: 20px;
+            }
+            .map-container {
+                height: 300px; /* Adjust height for smaller screens */
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+        <!-- Navbar Section-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand" href="#">
+                <div class="logo-placeholder">
+                    <img src="images/logo_nav_bar.png" height="40px" alt="Trip Triangles Logo">
+                </div>
+                <div class="brand-text">
+                    <span class="company-name">Trip Triangles</span>
+                    <span class="tagline">Your Journey, Our Responsibility!!!</span>
+                </div>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:2">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:3">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="fleetDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="--i:4">
+                            Fleet
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="fleetDropdown">
+                            <li><a class="dropdown-item" href="#">Sedan</a></li>
+                            <li><a class="dropdown-item" href="#">SUV</a></li>
+                            <li><a class="dropdown-item" href="#">Luxury</a></li>
+                            <li><a class="dropdown-item" href="#">Traveller</a></li>
+                            <li><a class="dropdown-item" href="#">Mini Bus</a></li>
+                            <li><a class="dropdown-item" href="#">Bus</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:5">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:6">Contact Us</a>
+                    </li>
+                </ul>
+                
+                <!-- CTA Buttons -->
+                <div class="btn-container ms-lg-3">
+                    <a href="#" class="btn btn-signin me-2">Sign In</a>
+                    <a href="#" class="btn btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="contact-container p-2">
+        <div class="contact-header">
+            <h1><i class="fas fa-headset me-2"></i>Contact Us</h1>
+            <p>Get in touch with us for premium car rental services</p>
+        </div>
+        
+        <div class="contact-content">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4 animate-fadeIn delay-1">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone Numbers</h3>
+                        <div class="contact-info">
+                            <a href="tel:+911234567890"><i class="fas fa-phone-alt me-2"></i>+91 123 456 7890</a>
+                            <a href="tel:+919876543210"><i class="fas fa-mobile-alt me-2"></i>+91 987 654 3210</a>
+                            <a href="tel:+18001234567"><i class="fas fa-phone me-2"></i>1-800-123-4567 (Toll Free)</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4 animate-fadeIn delay-2">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp Booking</h3>
+                        <p>Click to chat directly with our booking team</p>
+                        <a href="https://wa.me/911234567890?text=Hello,%20I'm%20interested%20in%20renting%20a%20Mercedes%20Benz" class="whatsapp-btn mt-3">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4 animate-fadeIn delay-3">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <div class="contact-info">
+                            <a href="mailto:bookings@mbrental.com"><i class="fas fa-envelope me-2"></i>bookings@mbrental.com</a>
+                            <a href="mailto:support@mbrental.com"><i class="fas fa-life-ring me-2"></i>support@mbrental.com</a>
+                            <a href="mailto:corporate@mbrental.com"><i class="fas fa-briefcase me-2"></i>corporate@mbrental.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4 animate-fadeIn delay-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Social Media</h3>
+                        <p>Follow us for updates and offers</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="contact-divider">
+            
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="mb-4"><i class="fas fa-map-marker-alt me-2"></i>Our Location</h2>
+                    <div class="map-container">
+                        <!-- 📍 Trip Triangles – Spring Dales, Kharadi, Pune -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3782.423854991351!2d73.9269134!3d18.5549203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c166b669105d%3A0x1f1b9299cc6859bd!2sTrip%20Triangles%20Tours%20And%20Travels!5e0!3m2!1sen!2sin!4v1755613648964!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h2 class="mb-4"><i class="fas fa-clock me-2"></i>Business Hours</h2>
+                    <div class="contact-card">
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday</span> <span>8:00 AM - 10:00 PM</span></li>
+                            <li><span>Saturday</span> <span>9:00 AM - 10:00 PM</span></li>
+                            <li><span>Sunday</span> <span>9:00 AM - 8:00 PM</span></li>
+                            <li><span>Emergency Contact</span> <span>24/7 Available</span></li>
+                        </ul>
+                    </div>
+                    
+                    <h2 class="mt-5 mb-4"><i class="fas fa-info-circle me-2"></i>Additional Info</h2>
+                    <div class="contact-card">
+                        <p><i class="fas fa-check-circle me-2 text-success"></i>Airport pickup and drop available</p>
+                        <p><i class="fas fa-check-circle me-2 text-success"></i>Outstation trips welcome</p>
+                        <p><i class="fas fa-check-circle me-2 text-success"></i>Corporate discounts available</p>
+                        <p><i class="fas fa-check-circle me-2 text-success"></i>Long-term rental options</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Animated Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- 1. Brand / Tagline -->
+      <div class="col-lg-4 mb-4">
+        <div class="footer-brand">
+          <div class="logo-circle">
+            <img src="images/logo_nav_bar.png" height="40px" alt="">
+          </div>
+          <div>
+            <h5>Trip Triangles</h5>
+            <small>Your Journey, Our Responsibility!!!</small>
+          </div>
+        </div>
+        <p class="mt-3">Safe • Reliable • Transparent<br>
+          Serving 6000+ happy travellers since 2015.</p>
+      </div>
+
+      <!-- 2. Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="footer-title">Explore</h6>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#fleet">Fleet</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- 3. Services -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="footer-title">Services</h6>
+        <ul class="footer-links">
+          <li><a href="#">Pune ↔ Mumbai</a></li>
+          <li><a href="#">Airport Transfers</a></li>
+          <li><a href="#">Weddings & Events</a></li>
+          <li><a href="#">Corporate Packages</a></li>
+        </ul>
+      </div>
+
+      <!-- 4. Contact -->
+      <div class="col-lg-4 mb-4">
+        <h6 class="footer-title">Contact Us</h6>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone-alt"></i><a href="tel:+919373074747">+91 93730 74747</a></li>
+          <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/918888668881">+91 88886 68881</a></li>
+          <li><i class="fas fa-envelope"></i><a href="mailto:triptriangles@gmail.com">triptriangles@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i>Spring Dales, Kharadi, Pune – 411014</li>
+        </ul>
+
+        <!-- Social pulse icons -->
+        <div class="footer-social mt-3">
+          <a href="https://www.instagram.com/triptriangles_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1F9Rj1tZ5r/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8" target="_blank"><i class="fas fa-map-marked-alt"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Trip Triangles Tours & Travels. All rights reserved.</span>
+      <span class="ms-auto">Crafted with <i class="fas fa-heart pulse-heart"></i> in Pune</span>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-fadeIn');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.visibility = 'visible';
+                        entry.target.classList.add('animate-fadeIn');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(el => {
+                el.style.visibility = 'hidden';
+                observer.observe(el);
+            });
+            
+            // WhatsApp button animation
+            const whatsappBtn = document.querySelector('.whatsapp-btn');
+            if (whatsappBtn) {
+                whatsappBtn.addEventListener('mouseover', function() {
+                    this.innerHTML = '<i class="fab fa-whatsapp"></i> Start Chat';
+                });
+                
+                whatsappBtn.addEventListener('mouseout', function() {
+                    this.innerHTML = '<i class="fab fa-whatsapp"></i> WhatsApp Us';
+                });
+            }
+        });
+        
+         //footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
