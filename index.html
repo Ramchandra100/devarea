@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Triangles Tours & Travels</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav_bar.css">
+</head>
+<body>
+    <!-- Navbar Section-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand" href="#">
+                <div class="logo-placeholder">
+                    <img src="images/logo_nav_bar.png" height="40px" alt="Trip Triangles Logo">
+                </div>
+                <div class="brand-text">
+                    <span class="company-name">Trip Triangles</span>
+                    <span class="tagline">Your Journey, Our Responsibility!!!</span>
+                </div>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:2">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:3">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="fleetDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="--i:4">
+                            Fleet
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="fleetDropdown">
+                            <li><a class="dropdown-item" href="#">Sedan</a></li>
+                            <li><a class="dropdown-item" href="#">SUV</a></li>
+                            <li><a class="dropdown-item" href="#">Luxury</a></li>
+                            <li><a class="dropdown-item" href="#">Traveller</a></li>
+                            <li><a class="dropdown-item" href="#">Mini Bus</a></li>
+                            <li><a class="dropdown-item" href="#">Bus</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:5">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="--i:6">Contact Us</a>
+                    </li>
+                </ul>
+                
+                <!-- CTA Buttons -->
+                <div class="btn-container ms-lg-3">
+                    <a href="#" class="btn btn-signin me-2">Sign In</a>
+                    <a href="#" class="btn btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Column - Content -->
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Explore Our Verified & Professional <span>Cars</span></h1>
+                        <p class="hero-subtext">Modern design sports cruisers for those who crave adventure & grandeur cars for relaxing with your loved ones.</p>
+                        
+                        <div class="trust-badge mb-4">
+                            <div class="avatars">
+                                <div class="avatar"></div>
+                                <div class="avatar"></div>
+                                <div class="avatar"></div>
+                                <span>6K+ Customers have used our services</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-rent">Rent a Car</a>
+                            <a href="#" class="btn btn-add">Add Your Car</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Car Image -->
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <div class="hero-image-container">
+                        <img src="images/hero_section_car.png" alt="Luxury Car" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- About Us Section -->
+    <section class="about-section">
+        <div class="container">
+            <!-- Our Mission Subsection -->
+            <div class="row align-items-center mission-section">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="about-content" data-aos="fade-right">
+                        <h2 class="section-title">Our <span>Mission</span></h2>
+                        <p class="about-text">
+                            From the very beginning, our mission has been simple: to make every journey <span class="highlight">safe</span>, <span class="highlight">comfortable</span>, and <span class="highlight">memorable</span>. Over the years, with hard work, honesty, and the support of our loyal customers, we have grown from one car to a wide fleet of sedans, SUVs, travellers, mini-buses, and buses – serving every travel need, big or small.
+                        </p>
+                        <div class="achievement-badges">
+                            <span class="badge safety">100% Safety</span>
+                            <span class="badge satisfaction">98% Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <div class="about-image mission-image" data-aos="fade-left">
+                        <div class="blob-shape">
+                            <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Our Mission" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Story Subsection -->
+            <div class="row align-items-center story-section">
+                <div class="col-lg-6">
+                    <div class="about-image story-image" data-aos="fade-right">
+                        <div class="blob-shape">
+                            <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Our Story" class="img-fluid">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content" data-aos="fade-left">
+                        <h2 class="section-title">Our <span>Story</span></h2>
+                        <p class="about-text">
+                            Trip Triangles Tours and Travels began its journey in 2015 with just a small Hatchback cab- Indica Vista, driven by the passion and vision of our founder <span class="highlight">Mr. Swapnil Adhao</span> – a Computer Engineer from Pune University. What started as a single-car service with a big dream soon turned into a trusted travel company. In 2016, Trip Triangles was officially registered as a company, and by 2017, we became GST registered – building credibility and trust among our customers.
+                        </p>
+                        <div class="founder-signature">
+                            <img src="https://i.imgur.com/JQ9pDdA.png" alt="Signature" class="signature">
+                            <p class="founder-name">Swapnil Adhao, Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+        <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title"><span style="color: white;">Why</span> <span>Choose Us</span></h2>
+                <p class="section-subtitle">Discover what makes Trip Triangles your perfect travel partner</p>
+            </div>
+
+            <div class="row benefits-grid">
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="card-title">Trusted Service</h3>
+                        <p class="card-text">Over a decade of building customer trust with reliable and transparent travel experiences.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3 class="card-title">Affordable Packages</h3>
+                        <p class="card-text">Carefully designed travel plans that balance comfort, quality, and budget.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="card-title">Experienced Team</h3>
+                        <p class="card-text">A passionate team of travel experts ensuring hassle-free and memorable journeys.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="card-title">24/7 Support</h3>
+                        <p class="card-text">Always available to assist you with bookings, queries, and travel emergencies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ===== Fleet Section ===== -->
+<section id="fleet" class="fleet-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title">Our <span>Vehicles</span></h2>
+      <p class="section-subtitle">Choose the perfect ride for your journey</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 1. Sedan -->
+      <div class="col-lg-4 col-md-6">
+        <div class="fleet-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?auto=format&fit=crop&w=800&q=80" alt="Sedan">
+            <div class="seat-badge">4+1 Seater</div>
+          </div>
+          <div class="card-body">
+            <h4>Sedan</h4>
+            <p class="models">Ciaz • Dzire • Etios</p>
+            <p class="desc">Smooth city rides & airport transfers with ample boot space.</p>
+            <a href="#contact" class="btn-rent-now">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. SUV -->
+      <div class="col-lg-4 col-md-6">
+        <div class="fleet-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="SUV">
+            <div class="seat-badge">6+1 / 7+1 Seater</div>
+          </div>
+          <div class="card-body">
+            <h4>SUV</h4>
+            <p class="models">Ertiga • Innova</p>
+            <p class="desc">Comfortable family trips & outstation tours with extra luggage room.</p>
+            <a href="#contact" class="btn-rent-now">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Luxury SUV -->
+      <div class="col-lg-4 col-md-6">
+        <div class="fleet-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Luxury SUV">
+            <div class="seat-badge">6+1 / 7+1 Seater</div>
+          </div>
+          <div class="card-body">
+            <h4>Luxury SUV</h4>
+            <p class="models">Innova Crysta • Fortuner • Kia Carnival</p>
+            <p class="desc">Premium interiors & captain seats for corporate & VIP travel.</p>
+            <a href="#contact" class="btn-rent-now">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Traveller -->
+      <div class="col-lg-4 col-md-6">
+        <div class="fleet-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1605637465095-95faa2a118f3?auto=format&fit=crop&w=800&q=80" alt="Traveller">
+            <div class="seat-badge">10-26 Seater</div>
+          </div>
+          <div class="card-body">
+            <h4>Traveller</h4>
+            <p class="models">Force Urbania • Force Traveller</p>
+            <p class="desc">Perfect for medium groups, school picnics & weekend getaways.</p>
+            <a href="#contact" class="btn-rent-now">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Mini Bus -->
+      <div class="col-lg-4 col-md-6">
+        <div class="fleet-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="Mini Bus">
+            <div class="seat-badge">27 Seater</div>
+          </div>
+          <div class="card-body">
+            <h4>Mini Bus</h4>
+            <p class="models">AC & Non-AC Options</p>
+            <p class="desc">Ideal for office outings & mid-size wedding parties.</p>
+            <a href="#contact" class="btn-rent-now">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Bus -->
+      <div class="col-lg-4 col-md-6">
+        <div class="fleet-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80" alt="Bus">
+            <div class="seat-badge">32 / 53 Seater</div>
+          </div>
+          <div class="card-body">
+            <h4>Bus</h4>
+            <p class="models">Volvo • Bharat Benz • Tata</p>
+            <p class="desc">Large-scale transport for corporate events & destination weddings.</p>
+            <a href="#contact" class="btn-rent-now">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===== Services Section ===== -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title">Our <span>Services</span></h2>
+      <p class="section-subtitle">One-stop solutions for every travel need</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- 1. Reliable Cab Rentals -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card">
+          <div class="icon-box">
+            <i class="fas fa-car-side"></i>
+          </div>
+          <h4>Reliable Cab Rentals</h4>
+          <p>Clean, well-maintained cars with verified drivers for local & outstation trips.</p>
+        </div>
+      </div>
+
+      <!-- 2. Driver on Rent -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card">
+          <div class="icon-box">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h4>Driver on Rent</h4>
+          <p>Professional, uniformed chauffeurs available hourly or on contract basis.</p>
+        </div>
+      </div>
+
+      <!-- 3. Pune ↔ Mumbai Cab -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card">
+          <div class="icon-box">
+            <i class="fas fa-route"></i>
+          </div>
+          <h4>Daily Pune–Mumbai Service</h4>
+          <p>Fixed-price, on-time rides between Pune & Mumbai 24×7 with door-step pickup.</p>
+        </div>
+      </div>
+
+      <!-- 4. Group / Wedding Trips -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card">
+          <div class="icon-box">
+            <i class="fas fa-ring"></i>
+          </div>
+          <h4>Group & Wedding Trips</h4>
+          <p>Multiple-vehicle fleets, flower-decorated cars & on-site coordinators for your big day.</p>
+        </div>
+      </div>
+
+      <!-- 5. Corporate Bookings -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card">
+          <div class="icon-box">
+            <i class="fas fa-building"></i>
+          </div>
+          <h4>Corporate Bookings</h4>
+          <p>Monthly packages, GST invoicing & dedicated fleet managers for offices & MICE events.</p>
+        </div>
+      </div>
+
+      <!-- 6. Bus & Mini-Bus Hire -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card">
+          <div class="icon-box">
+            <i class="fas fa-bus-alt"></i>
+          </div>
+          <h4>Bus & Mini-Bus Hire</h4>
+          <p>10- to 53-seater luxury coaches for picnics, conferences & long-distance tours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===== Testimonials Section ===== -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title">What Our <span>Customers Say</span></h2>
+      <p class="section-subtitle">Over 6,000 happy journeys and counting</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Review 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Pune to Mumbai drop was seamless. Driver arrived 15 min early, car was spotless, and reached on time for my flight.”
+          </p>
+          <div class="client-info">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="avatar">
+            <div>
+              <h6>Riya Deshpande</h6>
+              <span>Business Traveller</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Booked two Innovas for our family trip to Mahabaleshwar. Comfortable ride, courteous drivers, transparent billing.”
+          </p>
+          <div class="client-info">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="avatar">
+            <div>
+              <h6>Prashant Kulkarni</h6>
+              <span>Family Tour</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="stars">★★★★☆</div>
+          <p class="review-text">
+            “Used Trip Triangles for our corporate offsite. 53-seater Volvo was punctual and the coordinator was super helpful.”
+          </p>
+          <div class="client-info">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="avatar">
+            <div>
+              <h6>Anita Mehra</h6>
+              <span>HR Manager, TechNova</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Wedding fleet of 10 cars decorated beautifully. The drivers were in uniform and extremely professional. 5 stars!”
+          </p>
+          <div class="client-info">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" class="avatar">
+            <div>
+              <h6>Vikram Singh</h6>
+              <span>Groom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Daily airport runs for our executives have never been smoother. Billing is GST-compliant and always on time.”
+          </p>
+          <div class="client-info">
+            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Client" class="avatar">
+            <div>
+              <h6>Neha Kapoor</h6>
+              <span>Admin Head, FinServ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">
+            “Booked last-minute for a night journey to Shirdi. Car arrived within 30 minutes and the ride was very safe.”
+          </p>
+          <div class="client-info">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Client" class="avatar">
+            <div>
+              <h6>Rajesh Patil</h6>
+              <span>Solo Traveller</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Modern Animated Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- 1. Brand / Tagline -->
+      <div class="col-lg-4 mb-4">
+        <div class="footer-brand">
+          <div class="logo-circle">
+            <img src="images/logo_nav_bar.png" height="40px" alt="">
+          </div>
+          <div>
+            <h5>Trip Triangles</h5>
+            <small>Your Journey, Our Responsibility!!!</small>
+          </div>
+        </div>
+        <p class="mt-3">Safe • Reliable • Transparent<br>
+          Serving 6000+ happy travellers since 2015.</p>
+      </div>
+
+      <!-- 2. Quick Links -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="footer-title">Explore</h6>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#fleet">Fleet</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- 3. Services -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h6 class="footer-title">Services</h6>
+        <ul class="footer-links">
+          <li><a href="#">Pune ↔ Mumbai</a></li>
+          <li><a href="#">Airport Transfers</a></li>
+          <li><a href="#">Weddings & Events</a></li>
+          <li><a href="#">Corporate Packages</a></li>
+        </ul>
+      </div>
+
+      <!-- 4. Contact -->
+      <div class="col-lg-4 mb-4">
+        <h6 class="footer-title">Contact Us</h6>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone-alt"></i><a href="tel:+919373074747">+91 93730 74747</a></li>
+          <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/918888668881">+91 88886 68881</a></li>
+          <li><i class="fas fa-envelope"></i><a href="mailto:triptriangles@gmail.com">triptriangles@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i>Spring Dales, Kharadi, Pune – 411014</li>
+        </ul>
+
+        <!-- Social pulse icons -->
+        <div class="footer-social mt-3">
+          <a href="https://www.instagram.com/triptriangles_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1F9Rj1tZ5r/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8" target="_blank"><i class="fas fa-map-marked-alt"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Trip Triangles Tours & Travels. All rights reserved.</span>
+      <span class="ms-auto">Crafted with <i class="fas fa-heart pulse-heart"></i> in Pune</span>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
