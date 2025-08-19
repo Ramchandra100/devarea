@@ -24,3 +24,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             // You can add more initialization code here if needed
         });
+
+    //footer
+    document.getElementById('year').textContent = new Date().getFullYear();
