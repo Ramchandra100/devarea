@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Trip Triangles – FAQ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/nav_bar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f5f5f5; }
+    /* Hero Section */
+    .hero { position: relative; background: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding: 120px 0; color: #fff; }
+    .hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    .hero .hero-content { position: relative; z-index: 2; text-align: center; }
+
+    /* FAQ Accordion style */
+    .faq-section { padding: 60px 0; }
+    .accordion-button:not(.collapsed) { background-color: #343a40; color: #fff; }
+    .accordion-button { font-weight: 600; }
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar Section-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <!-- Brand/Logo -->
+      <a class="navbar-brand" href="#">
+        <div class="logo-placeholder">
+          <img src="images/logo_nav_bar.png" height="40px" alt="Trip Triangles Logo">
+        </div>
+        <div class="brand-text">
+          <span class="company-name">Trip Triangles</span>
+          <span class="tagline">Your Journey, Our Responsibility!!!</span>
+        </div>
+      </a>
+
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="--i:1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" style="--i:2">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html" style="--i:3">Services</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="fleetDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="--i:4">
+              Fleet
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="fleetDropdown">
+              <li><a class="dropdown-item" href="#">Sedan</a></li>
+              <li><a class="dropdown-item" href="#">SUV</a></li>
+              <li><a class="dropdown-item" href="#">Luxury</a></li>
+              <li><a class="dropdown-item" href="#">Traveller</a></li>
+              <li><a class="dropdown-item" href="#">Mini Bus</a></li>
+              <li><a class="dropdown-item" href="#">Bus</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html" style="--i:5">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_us.html" style="--i:6">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- CTA Buttons -->
+        <div class="btn-container ms-lg-3">
+          <!-- <a href="#" class="btn btn -signin me-2">Sign In</a> -->
+          <a href="tel:+919373074747" class="btn btn-signup"><span class="fas fa-phone-alt me-2"></span>Call Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1 class="display-4 fw-bold">Frequently Asked Questions</h1>
+      <p class="lead">Here are answers to the most common queries about Trip Triangles services</p>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="faq-section container">
+    <div class="accordion" id="faqAccordion">
+      <!-- Add 10 FAQs -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ans1">
+            How can I book a cab with Trip Triangles?
+          </button>
+        </h2>
+        <div id="ans1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">You can book through our website, WhatsApp, or call us directly—24×7 support.</div>
+        </div>
+      </div>
+      <!-- Q2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans2">
+            What vehicle options do you offer?
+          </button>
+        </h2>
+        <div id="ans2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Sedans, SUVs, Luxury SUVs, Travellers, Mini Buses, and more.</div>
+        </div>
+      </div>
+      <!-- Q3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans3">
+            Is there service available from Pune to Mumbai?
+          </button>
+        </h2>
+        <div id="ans3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Yes, we offer daily and outstation trip options, including Pune–Mumbai.</div>
+        </div>
+      </div>
+      <!-- Q4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans4">
+            What are your pricing criteria?
+          </button>
+        </h2>
+        <div id="ans4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Pricing is based on distance, vehicle type, trip duration, and any extras like tolls or waiting time.</div>
+        </div>
+      </div>
+      <!-- Q5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans5">
+            Do you allow one-way bookings?
+          </button>
+        </h2>
+        <div id="ans5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Yes, both one-way and round-trip bookings are available.</div>
+        </div>
+      </div>
+      <!-- Q6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans6">
+            Do you offer hourly rentals?
+          </button>
+        </h2>
+        <div id="ans6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Yes, we have hourly rentals for local usage as well as full-day/outstation trips.</div>
+        </div>
+      </div>
+      <!-- Q7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans7">
+            What if my flight/train is delayed?
+          </button>
+        </h2>
+        <div id="ans7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">We monitor your arrival time and adjust pick-up times accordingly—at no extra cost.</div>
+        </div>
+      </div>
+      <!-- Q8 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans8">
+            Can bookings be modified or canceled?
+          </button>
+        </h2>
+        <div id="ans8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Yes—changes or cancellations can be made by contacting support before the scheduled trip.</div>
+        </div>
+      </div>
+      <!-- Q9 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans9">
+            Are drivers verified and professional?
+          </button>
+        </h2>
+        <div id="ans9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">All drivers are background-verified, experienced professionals ensuring your safety and comfort.</div>
+        </div>
+      </div>
+      <!-- Q10 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq10">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans10">
+            How can I contact customer support?
+          </button>
+        </h2>
+        <div id="ans10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">You can call us anytime at <b>+91 88886 68881</b> or email us at <b>support@triptriangles.com</b>.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modern Animated Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- 1. Brand / Tagline -->
+        <div class="col-lg-4 mb-4">
+          <div class="footer-brand">
+            <div class="logo-circle">
+              <img src="images/logo_nav_bar.png" height="40px" alt="">
+            </div>
+            <div>
+              <h5>Trip Triangles</h5>
+              <small>Your Journey, Our Responsibility!!!</small>
+            </div>
+          </div>
+          <p class="mt-3">Safe • Reliable • Transparent<br>
+            Serving 6000+ happy travellers since 2015.</p>
+        </div>
+
+        <!-- 2. Quick Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="footer-title">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#fleet">Fleet</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Services -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="footer-title">Services</h6>
+          <ul class="footer-links">
+            <li><a href="#">Pune ↔ Mumbai</a></li>
+            <li><a href="#">Airport Transfers</a></li>
+            <li><a href="#">Weddings & Events</a></li>
+            <li><a href="#">Corporate Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- 4. Contact -->
+        <div class="col-lg-4 mb-4">
+          <h6 class="footer-title">Contact Us</h6>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone-alt"></i><a href="tel:+919373074747">+91 9373074747</a></li>
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/918888668881">+91 8888668881</a></li>
+            <li><i class="fas fa-envelope"></i><a href="mailto:triptriangles@gmail.com">triptriangles@gmail.com</a></li>
+            <li><i class="fas fa-map-marker-alt"></i><a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8">A/106, Spring Dale's Society, Old Mundhwa Road, Near Oxygen Park, Kharadi – 411014, Pune, Maharashtra, India</a></li>
+            
+          </ul>
+
+          <!-- Social pulse icons -->
+          <div class="footer-social mt-3">
+            <a href="https://www.instagram.com/triptriangles_" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1F9Rj1tZ5r/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8" target="_blank"><i
+                class="fas fa-map-marked-alt"></i></a>
+                
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Trip Triangles Tours & Travels. All rights reserved.</span>
+        <span class="ms-auto">Crafted with <i class="fas fa-heart pulse-heart"></i> in Pune</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/nav_bar.js"></script>
+  <script>
+    //footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

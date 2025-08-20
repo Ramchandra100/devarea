@@ -147,6 +147,7 @@
         .navbar-toggler:focus {
             box-shadow: none;
         }
+
         
         /* Animations */
         @keyframes fadeIn {

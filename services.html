@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Triangles Tours & Travels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/nav_bar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1502920514313-52581002a659') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin: 15px 0;
+    }
+    /* Services */
+    .services {
+      padding: 60px 20px;
+      background: #f8f9fa;
+    }
+    .services h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .card img {
+      height: 220px;
+      object-fit: cover;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="mt-5">
+
+ <!-- Navbar Section-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <!-- Brand/Logo -->
+      <a class="navbar-brand" href="#">
+        <div class="logo-placeholder">
+          <img src="images/logo_nav_bar.png" height="40px" alt="Trip Triangles Logo">
+        </div>
+        <div class="brand-text">
+          <span class="company-name">Trip Triangles</span>
+          <span class="tagline">Your Journey, Our Responsibility!!!</span>
+        </div>
+      </a>
+
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="--i:1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" style="--i:2">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html" style="--i:3">Services</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="fleetDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="--i:4">
+              Fleet
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="fleetDropdown">
+              <li><a class="dropdown-item" href="#">Sedan</a></li>
+              <li><a class="dropdown-item" href="#">SUV</a></li>
+              <li><a class="dropdown-item" href="#">Luxury</a></li>
+              <li><a class="dropdown-item" href="#">Traveller</a></li>
+              <li><a class="dropdown-item" href="#">Mini Bus</a></li>
+              <li><a class="dropdown-item" href="#">Bus</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html" style="--i:5">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_us.html" style="--i:6">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- CTA Buttons -->
+        <div class="btn-container ms-lg-3">
+<a href="tel:+919373074747" class="btn btn-signup"><span class="fas fa-phone-alt me-2"></span>Call Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Explore with Trip Triangles</h1>
+      <p>Your trusted travel partner for every journey</p>
+      <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="row g-4">
+        
+        <!-- Cab Rental -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" class="card-img-top" alt="Cab Rental">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cab Rental</h5>
+              <p class="card-text">Reliable cab rentals for local and outstation travel.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Driver on Rent -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b" class="card-img-top" alt="Driver on Rent">
+            <div class="card-body text-center">
+              <h5 class="card-title">Driver on Rent</h5>
+              <p class="card-text">Professional drivers available on rent for your convenience.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Bookings -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="card-img-top" alt="Corporate Bookings">
+            <div class="card-body text-center">
+              <h5 class="card-title">Corporate Bookings</h5>
+              <p class="card-text">Hassle-free travel solutions for businesses and events.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wedding Trips -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1529634899834-71f0836b68ff" class="card-img-top" alt="Wedding Trips">
+            <div class="card-body text-center">
+              <h5 class="card-title">Wedding Trips</h5>
+              <p class="card-text">Luxury and comfort for your big day celebrations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pune–Mumbai -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" class="card-img-top" alt="Pune Mumbai Service">
+            <div class="card-body text-center">
+              <h5 class="card-title">Pune–Mumbai Cabs</h5>
+              <p class="card-text">Daily cab services between Pune and Mumbai.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group / Family / Outstation -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" class="card-img-top" alt="Group Trips">
+            <div class="card-body text-center">
+              <h5 class="card-title">Group & Family Trips</h5>
+              <p class="card-text">Enjoy memorable group, family, and outstation trips with us.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Animated Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- 1. Brand / Tagline -->
+        <div class="col-lg-4 mb-4">
+          <div class="footer-brand">
+            <div class="logo-circle">
+              <img src="images/logo_nav_bar.png" height="40px" alt="">
+            </div>
+            <div>
+              <h5>Trip Triangles</h5>
+              <small>Your Journey, Our Responsibility!!!</small>
+            </div>
+          </div>
+          <p class="mt-3">Safe • Reliable • Transparent<br>
+            Serving 6000+ happy travellers since 2015.</p>
+        </div>
+
+        <!-- 2. Quick Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="footer-title">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#fleet">Fleet</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Services -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="footer-title">Services</h6>
+          <ul class="footer-links">
+            <li><a href="#">Pune ↔ Mumbai</a></li>
+            <li><a href="#">Airport Transfers</a></li>
+            <li><a href="#">Weddings & Events</a></li>
+            <li><a href="#">Corporate Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- 4. Contact -->
+        <div class="col-lg-4 mb-4">
+          <h6 class="footer-title">Contact Us</h6>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone-alt"></i><a href="tel:+919373074747">+91 9373074747</a></li>
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/918888668881">+91 8888668881</a></li>
+            <li><i class="fas fa-envelope"></i><a href="mailto:triptriangles@gmail.com">triptriangles@gmail.com</a></li>
+            <li><i class="fas fa-map-marker-alt"></i><a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8">A/106, Spring Dale's Society, Old Mundhwa Road, Near Oxygen Park, Kharadi – 411014, Pune, Maharashtra, India</a></li>
+            
+          </ul>
+
+          <!-- Social pulse icons -->
+          <div class="footer-social mt-3">
+            <a href="https://www.instagram.com/triptriangles_" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1F9Rj1tZ5r/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8" target="_blank"><i
+                class="fas fa-map-marked-alt"></i></a>
+                
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Trip Triangles Tours & Travels. All rights reserved.</span>
+        <span class="ms-auto">Crafted with <i class="fas fa-heart pulse-heart"></i> in Pune</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    //footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
