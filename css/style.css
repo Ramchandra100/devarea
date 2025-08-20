@@ -965,3 +965,22 @@
 }
 
 
+
+/* Know More button */
+.btn.know-more {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 22px;
+  border-radius: 50px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+  background-color: #1a1a1a;
+}
+
+.btn.know-more:hover {
+  background: var(--primary-color);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}

@@ -160,13 +160,7 @@
 .clip-reveal-fade { animation: clipRevealFade .9s ease-out forwards; }
 
 /* -------------------------------------------------- */
-/* 6. Soft bounce + fade                              */
-@keyframes softBounceFade {
-  0%   { opacity: 0; transform: translateY(30px) scale(.9); }
-  60%  { opacity: 1; transform: translateY(-4px) scale(1.02); }
-  100% {                 transform: translateY(0)   scale(1);    }
-}
-.soft-bounce-fade { animation: softBounceFade .7s ease-out forwards; }
+
 
 /* -------------------------------------------------- */
 /* keep your global observer styles                   */

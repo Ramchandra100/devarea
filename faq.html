@@ -8,6 +8,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/nav_bar.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/custom_animation.css">
   <style>
     body { font-family: 'Poppins', sans-serif; background: #f5f5f5; }
     /* Hero Section */
@@ -15,10 +16,66 @@
     .hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
     .hero .hero-content { position: relative; z-index: 2; text-align: center; }
 
-    /* FAQ Accordion style */
-    .faq-section { padding: 60px 0; }
-    .accordion-button:not(.collapsed) { background-color: #343a40; color: #fff; }
-    .accordion-button { font-weight: 600; }
+ /* ---------- FAQ Section ---------- */
+.faq-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.accordion-item {
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.accordion-button {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #212121;
+  background: #fafafa;
+  border: none;
+  box-shadow: none;
+  padding: 20px 25px;
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  padding: 25px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  background: #fff;
+}
+
+/* Chevron icon color */
+.accordion-button::after {
+  filter: brightness(0) saturate(100%) invert(62%) sepia(86%) saturate(422%) hue-rotate(359deg) brightness(102%) contrast(105%);
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 60px 0;
+  }
+  .accordion-button {
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+}
 
   </style>
 </head>
@@ -96,119 +153,117 @@
   </section>
 
   <!-- FAQ Accordion -->
-  <section class="faq-section container">
-    <div class="accordion" id="faqAccordion">
-      <!-- Add 10 FAQs -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq1">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ans1">
-            How can I book a cab with Trip Triangles?
-          </button>
-        </h2>
-        <div id="ans1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">You can book through our website, WhatsApp, or call us directly—24×7 support.</div>
-        </div>
-      </div>
-      <!-- Q2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq2">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans2">
-            What vehicle options do you offer?
-          </button>
-        </h2>
-        <div id="ans2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Sedans, SUVs, Luxury SUVs, Travellers, Mini Buses, and more.</div>
-        </div>
-      </div>
-      <!-- Q3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq3">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans3">
-            Is there service available from Pune to Mumbai?
-          </button>
-        </h2>
-        <div id="ans3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Yes, we offer daily and outstation trip options, including Pune–Mumbai.</div>
-        </div>
-      </div>
-      <!-- Q4 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq4">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans4">
-            What are your pricing criteria?
-          </button>
-        </h2>
-        <div id="ans4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Pricing is based on distance, vehicle type, trip duration, and any extras like tolls or waiting time.</div>
-        </div>
-      </div>
-      <!-- Q5 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq5">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans5">
-            Do you allow one-way bookings?
-          </button>
-        </h2>
-        <div id="ans5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Yes, both one-way and round-trip bookings are available.</div>
-        </div>
-      </div>
-      <!-- Q6 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq6">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans6">
-            Do you offer hourly rentals?
-          </button>
-        </h2>
-        <div id="ans6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Yes, we have hourly rentals for local usage as well as full-day/outstation trips.</div>
-        </div>
-      </div>
-      <!-- Q7 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq7">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans7">
-            What if my flight/train is delayed?
-          </button>
-        </h2>
-        <div id="ans7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">We monitor your arrival time and adjust pick-up times accordingly—at no extra cost.</div>
-        </div>
-      </div>
-      <!-- Q8 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq8">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans8">
-            Can bookings be modified or canceled?
-          </button>
-        </h2>
-        <div id="ans8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">Yes—changes or cancellations can be made by contacting support before the scheduled trip.</div>
-        </div>
-      </div>
-      <!-- Q9 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq9">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans9">
-            Are drivers verified and professional?
-          </button>
-        </h2>
-        <div id="ans9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">All drivers are background-verified, experienced professionals ensuring your safety and comfort.</div>
-        </div>
-      </div>
-      <!-- Q10 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq10">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ans10">
-            How can I contact customer support?
-          </button>
-        </h2>
-        <div id="ans10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">You can call us anytime at <b>+91 88886 68881</b> or email us at <b>support@triptriangles.com</b>.</div>
-        </div>
+  <!-- ===== FAQs Section ===== -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Frequently <span>Asked Questions</span></h2>
+        <p class="section-subtitle">Everything you need to know before booking</p>
       </div>
 
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+
+            <!-- Item 1 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne"
+                  aria-expanded="true" aria-controls="faqOne">
+                  How do I book a cab with Trip Triangles?
+                </button>
+              </h2>
+              <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Booking is simple: call or WhatsApp +91 88886 68881, share your pickup & drop details,
+                  and receive instant confirmation along with driver & vehicle details.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="100">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                  What types of vehicles are available?
+                </button>
+              </h2>
+              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sedans (Dzire, Etios), SUVs (Innova, Ertiga), Luxury SUVs (Fortuner, Carnival),
+                  Force Traveller (10-26 seater), Mini-Bus (27 seater) & Bus (32/53 seater AC/Non-AC).
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="300">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                  Are drivers verified and professional?
+                </button>
+              </h2>
+              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. All drivers undergo background verification, carry valid licenses, and receive
+                  regular training for safe & courteous service.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="400">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                  Do you provide airport pick-up & drop?
+                </button>
+              </h2>
+              <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely! We operate 24×7 airport transfers for Pune & Mumbai with real-time flight
+                  tracking and 30 minutes complimentary waiting time.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="500">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
+                  Is advance payment required?
+                </button>
+              </h2>
+              <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  A small token amount (10-20 %) confirms your booking. The balance can be paid at the
+                  end of the trip via cash, UPI, or card.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="600">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqSix" aria-expanded="false" aria-controls="faqSix">
+                  Can I modify or cancel my booking?
+                </button>
+              </h2>
+              <div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. Modifications are free up to 6 hours before travel. Cancellations made 24 hours
+                  in advance receive a full refund.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -218,7 +273,7 @@
       <div class="row">
 
         <!-- 1. Brand / Tagline -->
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 mb-4" data-animate="slide-up-fade" >
           <div class="footer-brand">
             <div class="logo-circle">
               <img src="images/logo_nav_bar.png" height="40px" alt="">
@@ -288,6 +343,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/nav_bar.js"></script>
+  <script src="js/custom_animation.js"></script>
   <script>
     //footer
     document.getElementById('year').textContent = new Date().getFullYear();

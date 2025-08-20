@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/nav_bar.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/custom_animation.css">
 </head>
 <body>
 
@@ -67,9 +68,9 @@
   </nav>
 
   <!-- ===== HERO ===== -->
-  <header class="hero d-flex align-items-center">
+  <header class="hero d-flex align-items-center" data-animate="slide-up-fade">
     <div class="overlay"></div>
-    <div class="container position-relative text-center text-white">
+    <div class="container position-relative text-center text-white" data-animate="slide-up-fade" data-delay="300">
       <h1 class="display-5 fw-bold mb-2">Trusted Tours & Car Rentals Since 2015</h1>
       <p class="lead mb-4">Pune–Mumbai daily cabs • Outstation trips • Corporate bookings • Wedding & group travel</p>
       <a href="#fleet" class="btn btn-hero">Explore Our Fleet</a>
@@ -82,7 +83,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">About Us</li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="#">About Us</a></li>
         </ol>
       </nav>
     </div>
@@ -93,12 +94,12 @@
     <div class="container">
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
-          <div class="rounded-4 overflow-hidden shadow-lg ratio ratio-4x3">
+          <div class="rounded-4 overflow-hidden shadow-lg ratio ratio-4x3" data-animate="slide-right-fade">
             <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1600&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Road trip car">
           </div>
         </div>
-        <div class="col-lg-6">
-          <h2 class="section-title">Our Story</h2>
+        <div class="col-lg-6" data-animate="slide-up-fade">
+          <h2 class="section-title mb-4"><span style="color: black;">Our</span> <span style="color: var(btn-outline-primary);">Story</span></h2>
           <p class="mb-2">
             Trip Triangles Tours and Travels began its journey in <strong>2015</strong> with just a small hatchback cab (Indica Vista), driven by the passion and vision of our founder <strong>Mr. Swapnil Ashok Adhao</strong> – a Computer Engineer from Pune University.
           </p>
@@ -128,8 +129,8 @@
 
   <!-- ===== TIMELINE (DreamsRent-like vertical line) ===== -->
   <section id="timeline" class="section-pad bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Company Journey</h2>
+    <div class="container" data-animate="blur-in-fade">
+      <h2 class="section-title text-center mb-5"><span style="color: black;">Company</span> <span style="color: var(btn-outline-primary);"> Journey</span></h2>
 
       <div class="timeline">
         <div class="timeline-item left">
@@ -172,21 +173,21 @@
     <div class="container">
       <div class="row g-4 text-center">
         <div class="col-md-4">
-          <div class="mv-card">
+          <div class="mv-card" data-animate="slide-up-fade" data-delay="100">
             <i class="fa-solid fa-bullseye"></i>
             <h5>Mission</h5>
             <p>Deliver seamless, safe & memorable journeys with honest pricing and top service quality.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="mv-card">
+          <div class="mv-card" data-animate="slide-up-fade" data-delay="200">
             <i class="fa-solid fa-eye"></i>
             <h5>Vision</h5>
             <p>To be India’s most trusted travel partner, known for reliability & comfort.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="mv-card">
+          <div class="mv-card" data-animate="slide-up-fade" data-delay="300">
             <i class="fa-solid fa-handshake-angle"></i>
             <h5>Values</h5>
             <p>Integrity, transparency, punctuality, customer-first approach—always.</p>
@@ -220,244 +221,418 @@
     </div>
   </section>
 
-  <!-- ===== WHY CHOOSE US (image + icon cards) ===== -->
-  <section id="services" class="section-pad">
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
     <div class="container">
-      <h2 class="section-title text-center mb-4">Why Choose Trip Triangles</h2>
+      <div class="section-header" data-animate="slide-up-fade">
+        <h2 class="section-title"><span style="color: white;">Why</span> <span>Choose Us</span></h2>
+        <p class="section-subtitle" style="color: white;">Discover what makes Trip Triangles your perfect travel partner
+        </p>
+      </div>
+
+      <div class="row benefits-grid">
+        <!-- Card 1 -->
+        <div class="col-lg-3 col-md-6 mb-4" data-animate="slide-up-fade" data-delay="100">
+          <div class="benefit-card">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3 class="card-title">Trusted & Verified Drivers</h3>
+            <p class="card-text">Experienced, professional and reliable chauffeurs for every ride.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-3 col-md-6 mb-4" data-animate="slide-up-fade" data-delay="200">
+          <div class="benefit-card">
+            <div class="card-icon"><i class="fas fa-car"></i></div>
+            <h3 class="card-title">Wide Fleet of Vehicles</h3>
+            <p class="card-text">Sedans, SUVs, Travellers & Luxury Buses – the right ride for every trip.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-3 col-md-6 mb-4" data-animate="slide-up-fade" data-delay="300">
+          <div class="benefit-card">
+            <div class="card-icon"><i class="fas fa-clock"></i></div>
+            <h3 class="card-title">24×7 Availability</h3>
+            <p class="card-text">Day or night, we are always ready to serve you.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-3 col-md-6 mb-4" data-animate="slide-up-fade" data-delay="400">
+          <div class="benefit-card">
+            <div class="card-icon"><i class="fas fa-rupee-sign"></i></div>
+            <h3 class="card-title">Transparent Pricing</h3>
+            <p class="card-text">No hidden charges, only fair and competitive rates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Fleet Section ===== -->
+  <section id="fleet" class="fleet-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Our <span>Fleet</span></h2>
+        <p class="section-subtitle">Choose the perfect ride for your journey</p>
+      </div>
+
       <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="why-card">
-            <div class="why-media">
-              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600&auto=format&fit=crop" alt="">
+        <!-- 1. Sedan -->
+        <div class="col-lg-4 col-md-6">
+          <div class="fleet-card" data-animate="flip-in-bottom" data-delay="100">
+            <div class="card-image">
+              <img src="images/car_images/Sedan.jpg"
+                alt="Sedan">
+              <div class="seat-badge">4+1 Seater</div>
             </div>
-            <div class="why-body">
-              <i class="fa-solid fa-user-shield"></i>
-              <h6>Trusted & Verified Drivers</h6>
-              <p>Experienced, professional chauffeurs for every ride.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="why-card">
-            <div class="why-media">
-              <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1600&auto=format&fit=crop" alt="">
-            </div>
-            <div class="why-body">
-              <i class="fa-solid fa-cars"></i>
-              <h6>Wide Fleet</h6>
-              <p>Sedans, SUVs, Travellers & Luxury Buses for all needs.</p>
+            <div class="card-body">
+              <h4>Sedan</h4>
+              <p class="models">Ciaz • Dzire • Etios</p>
+              <p class="desc">Smooth city rides & airport transfers with ample boot space.</p>
+              <a href="contact_us.html" class="btn-rent-now">Book Now</a>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="why-card">
-            <div class="why-media">
-              <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1600&auto=format&fit=crop" alt="">
+        <!-- 2. SUV -->
+        <div class="col-lg-4 col-md-6">
+          <div class="fleet-card" data-animate="flip-in-bottom" data-delay="200">
+            <div class="card-image">
+              <img src="images/car_images/ertigas.jpeg"
+                alt="SUV">
+              <div class="seat-badge">6+1 / 7+1 Seater</div>
             </div>
-            <div class="why-body">
-              <i class="fa-solid fa-indian-rupee-sign"></i>
-              <h6>Transparent Pricing</h6>
-              <p>No hidden charges—fair, competitive rates.</p>
+            <div class="card-body">
+              <h4>SUV</h4>
+              <p class="models">Ertiga • Innova</p>
+              <p class="desc">Comfortable family trips & outstation tours with extra luggage room.</p>
+              <a href="contact_us.html" class="btn-rent-now">Book Now</a>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="why-card">
-            <div class="why-media">
-              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1600&auto=format&fit=crop" alt="">
+        <!-- 3. Luxury SUV -->
+        <div class="col-lg-4 col-md-6">
+          <div class="fleet-card" data-animate="flip-in-bottom" data-delay="300">
+            <div class="card-image">
+              <img src="images/car_images/Kia_Carnival.jpeg"
+                alt="Luxury SUV">
+              <div class="seat-badge">6+1 / 7+1 Seater</div>
             </div>
-            <div class="why-body">
-              <i class="fa-solid fa-headset"></i>
-              <h6>24×7 Support</h6>
-              <p>Always available—day or night.</p>
+            <div class="card-body">
+              <h4>Luxury SUV</h4>
+              <p class="models">Innova Crysta • Fortuner • Kia Carnival</p>
+              <p class="desc">Premium interiors & captain seats for corporate & VIP travel.</p>
+              <a href="contact_us.html" class="btn-rent-now">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Traveller -->
+        <div class="col-lg-4 col-md-6">
+          <div class="fleet-card" data-animate="flip-in-bottom" data-delay="400">
+            <div class="card-image">
+              <img src="images/car_images/traveller.jpeg" alt="Traveller">
+              <div class="seat-badge">10-26 Seater</div>
+            </div>
+            <div class="card-body">
+              <h4>Traveller</h4>
+              <p class="models">Force Urbania • Force Traveller</p>
+              <p class="desc">Perfect for medium groups, school picnics & weekend getaways.</p>
+              <a href="contact_us.html" class="btn-rent-now">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Mini Bus -->
+        <div class="col-lg-4 col-md-6">
+          <div class="fleet-card" data-animate="flip-in-bottom" data-delay="500">
+            <div class="card-image">
+              <img src="images/car_images/min_bus.jpeg"
+                alt="Mini Bus">
+              <div class="seat-badge">27 Seater</div>
+            </div>
+            <div class="card-body">
+              <h4>Mini Bus</h4>
+              <p class="models">AC & Non-AC Options</p>
+              <p class="desc">Ideal for office outings & mid-size wedding parties.</p>
+              <a href="contact_us.html" class="btn-rent-now">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Bus -->
+        <div class="col-lg-4 col-md-6">
+          <div class="fleet-card" data-animate="flip-in-bottom" data-delay="600">
+            <div class="card-image">
+              <img src="images/car_images/volvo.jpeg"
+                alt="Bus">
+              <div class="seat-badge">32 / 53 Seater</div>
+            </div>
+            <div class="card-body">
+              <h4>Bus</h4>
+              <p class="models">Volvo • Bharat Benz • Tata</p>
+              <p class="desc">Large-scale transport for corporate events & destination weddings.</p>
+              <a href="contact_us.html" class="btn-rent-now">Book Now</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+        <div class="mt-4 text text-center">
+  <a href="fleet.html" class="btn btn-outline-primary btn-sm know-more">
+    Know More&nbsp;<i class="fas fa-arrow-right ms-1"></i>
+  </a>
+</div>
   </section>
 
-  <!-- ===== FLEET (cards with seats & examples) ===== -->
-  <section id="fleet" class="section-pad bg-light">
+  <!-- ===== Testimonials Section ===== -->
+  <section id="testimonials" class="testimonials-section">
     <div class="container">
-      <h2 class="section-title text-center mb-4">Our Fleet</h2>
+      <div class="section-header text-center">
+        <h2 class="section-title">What Our <span>Customers Say</span></h2>
+        <p class="section-subtitle">Over 6,000 happy journeys and counting</p>
+      </div>
+
       <div class="row g-4">
-
-        <div class="col-md-6 col-lg-4">
-          <div class="fleet-card">
-            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop" alt="Sedan">
-            <div class="fleet-body">
-              <h5>Sedan</h5>
-              <p>Ciaz, Dzire, Etios – <strong>4+1 seats</strong></p>
+        <!-- Review 1 -->
+        <div class="col-lg-4 col-md-6" onclick="window.location.href='https://maps.app.goo.gl/3eTtgYaEbnyWGHVA9';">
+          <div class="testimonial-card" data-animate="blur-in-fade">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              “Our recent trip to Panchgani and Mahabaleshwar with Trip Triangles was an absolutely wonderful experience from start to finish. I booked the trip over a call, and Swapnil was incredibly helpful and polite. He suggested the best destination for this time of year and provided a well-planned 1-day itinerary covering all the must-visit points.”
+            </p>
+            <div class="client-info">
+              <img src="images/testimonials/cx1.jpeg" alt="Client" class="avatar">
+              <div>
+                <h6>Bhaava Shree Mathur</h6>
+                <span>Business Traveller</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="fleet-card">
-            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop" alt="SUV">
-            <div class="fleet-body">
-              <h5>SUV</h5>
-              <p>Ertiga, Innova – <strong>6+1 to 7+1 seats</strong></p>
+        <!-- Review 2 -->
+        <div class="col-lg-4 col-md-6" onclick="window.location.href='https://maps.app.goo.gl/3eTtgYaEbnyWGHVA9';">
+          <div class="testimonial-card" data-animate="blur-in-fade" data-delay="100">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              “I booked a weekend trip with Trip Triangles Tours & Travels for Lonavala and Matheran 2 days trip, and I was very happy with the service. Everything was well organized. Swapnil quickly arranged a cab for us, and our ride was smooth and on time. Price was very reasonable & brand new cab was provided. Neat and clean cab.”
+            </p>
+            <div class="client-info">
+              <img src="images/testimonials/cx2.jpeg" alt="Client" class="avatar">
+              <div>
+                <h6>shrikant patil</h6>
+                <span>Tour</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="fleet-card">
-            <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?q=80&w=1600&auto=format&fit=crop" alt="Luxury SUV">
-            <div class="fleet-body">
-              <h5>Luxury SUV</h5>
-              <p>Innova Crysta, Innova Hycross, Kia Carens, Toyota Fortuner, Kia Carnival – <strong>6+1 to 7+1</strong></p>
+        <!-- Review 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card" data-animate="blur-in-fade" data-delay="200">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="stars">★★★★☆</div>
+            <p class="review-text">
+              “I recently traveled with Trip Triangles Tours and Travels for a 3-days outstation trip with my family, and we all are very happier with the service provided. Mr. Swapnil, the owner, was also very helpful and even offered us a generous discount for our trip. Overall, our experience was highly satisfying, and we're definitely planning to book with Trip Triangles for our future trips. I highly recommend them to everyone. The best travel company in Pune.  ”
+            </p>
+            <div class="client-info">
+              <img src="images/testimonials/cx3.jpeg" alt="Client" class="avatar" onclick="window.location.href='https://maps.app.goo.gl/k2tqeCczuosdJHeH8';">
+              <div>
+                <h6>Sadhana Patil</h6>
+                <span>Traveller</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="fleet-card">
-            <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1600&auto=format&fit=crop" alt="Traveller">
-            <div class="fleet-body">
-              <h5>Traveller</h5>
-              <p>Force Urbania / Force Traveller – <strong>10 to 26 seater</strong></p>
+        <!-- Review 4 -->
+        <div class="col-lg-4 col-md-6" onclick="window.location.href='https://maps.app.goo.gl/sML4t6vm8jn4ArY16';">
+          <div class="testimonial-card" data-animate="blur-in-fade" data-delay="300">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              “Recent car rental experience with Trip triangles tours and travels to ALIBAUG from Pune was aweasome. The car was clean and well maintained and also the driver was friendly.Swapnil cordinated in a fantastic way Had a smooth pickup and drop. Rates were genuine. Will definitely rent the car from them again!”
+            </p>
+            <div class="client-info">
+              <img src="images/testimonials/cx4.jpeg" alt="Client" class="avatar">
+              <div>
+                <h6>Shailesh Kumar Singh</h6>
+                <span>Car Rent</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="fleet-card">
-            <img src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=1600&auto=format&fit=crop" alt="Mini Bus">
-            <div class="fleet-body">
-              <h5>Mini Bus</h5>
-              <p><strong>27 seater</strong> (AC)</p>
+        <!-- Review 5 -->
+        <div class="col-lg-4 col-md-6" onclick="window.location.href='https://maps.app.goo.gl/ifTv2yQAeazJU54t7';">
+          <div class="testimonial-card" data-animate="blur-in-fade" data-delay="400">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              “Overall trip cost was justifiable.
+Owner guidance was appropriate and he was very helpful.
+Over all experience was excellent and very Satisfactory, especially thanks to the Driver, Mayur ji.
+We highly recomad the service to all.”
+            </p>
+            <div class="client-info">
+              <img src="images/testimonials/cx5.jpeg" alt="Client" class="avatar">
+              <div>
+                <h6>Koustav Ghosh</h6>
+                <span>Tour</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="fleet-card">
-            <img src="https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?q=80&w=1600&auto=format&fit=crop" alt="Bus">
-            <div class="fleet-body">
-              <h5>Bus</h5>
-              <p>Volvo, BharatBenz, Tata – <strong>32 / 53 seater, AC/Non-AC</strong></p>
+        <!-- Review 6 -->
+        <div class="col-lg-4 col-md-6" onclick="window.location.href='https://maps.app.goo.gl/91w87ASfwzWjhrEp6';">
+          <div class="testimonial-card" data-animate="blur-in-fade" data-delay="600">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              “Had a smooth and stress-free journey from Pune to Mumbai airport recently! 🚗✈️
+The driver was perfectly on time ⏰—a big plus when catching a flight. He was polite, professional, and super helpful with the luggage too. 🙌”
+            </p>
+            <div class="client-info">
+              <img src="images/testimonials/cx6.jpeg" alt="Client" class="avatar">
+              <div>
+                <h6>Ronald Agrawal</h6>
+                <span>Traveller</span>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
+        <div class="mt-4 text text-center">
+  <a href="testimonials.html" class="btn btn-outline-primary btn-sm know-more">
+    Read More&nbsp;<i class="fas fa-arrow-right ms-1"></i>
+  </a>
+</div>
   </section>
 
-  <!-- ===== TESTIMONIALS (Bootstrap Carousel) ===== -->
-  <section class="section-pad">
+  <!-- ===== FAQs Section ===== -->
+  <section id="faq" class="faq-section">
     <div class="container">
-      <h2 class="section-title text-center mb-4">What Customers Say</h2>
-
-      <div id="testi" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="testi-card mx-auto">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-              <p class="mb-2">“Affordable pricing, clean cars and punctual drivers. Perfect for our Pune–Mumbai trips!”</p>
-              <h6 class="mb-0">Sneha P.</h6>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testi-card mx-auto">
-              <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="">
-              <p class="mb-2">“Highly professional team. Booking was easy and transparent—no hidden costs.”</p>
-              <h6 class="mb-0">Rohit K.</h6>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testi-card mx-auto">
-              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="">
-              <p class="mb-2">“We hired a 27-seater mini bus for a wedding. Flawless coordination!”</p>
-              <h6 class="mb-0">Priya S.</h6>
-            </div>
-          </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#testi" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testi" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
+      <div class="section-header text-center">
+        <h2 class="section-title">Frequently <span>Asked Questions</span></h2>
+        <p class="section-subtitle">Everything you need to know before booking</p>
       </div>
 
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+
+            <!-- Item 1 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne"
+                  aria-expanded="true" aria-controls="faqOne">
+                  How do I book a cab with Trip Triangles?
+                </button>
+              </h2>
+              <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Booking is simple: call or WhatsApp +91 88886 68881, share your pickup & drop details,
+                  and receive instant confirmation along with driver & vehicle details.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="100">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                  What types of vehicles are available?
+                </button>
+              </h2>
+              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sedans (Dzire, Etios), SUVs (Innova, Ertiga), Luxury SUVs (Fortuner, Carnival),
+                  Force Traveller (10-26 seater), Mini-Bus (27 seater) & Bus (32/53 seater AC/Non-AC).
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="300">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                  Are drivers verified and professional?
+                </button>
+              </h2>
+              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. All drivers undergo background verification, carry valid licenses, and receive
+                  regular training for safe & courteous service.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="400">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                  Do you provide airport pick-up & drop?
+                </button>
+              </h2>
+              <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely! We operate 24×7 airport transfers for Pune & Mumbai with real-time flight
+                  tracking and 30 minutes complimentary waiting time.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="500">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
+                  Is advance payment required?
+                </button>
+              </h2>
+              <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  A small token amount (10-20 %) confirms your booking. The balance can be paid at the
+                  end of the trip via cash, UPI, or card.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="accordion-item" data-animate="zoom-twist-fade" data-delay="600">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqSix" aria-expanded="false" aria-controls="faqSix">
+                  Can I modify or cancel my booking?
+                </button>
+              </h2>
+              <div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. Modifications are free up to 6 hours before travel. Cancellations made 24 hours
+                  in advance receive a full refund.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section id="faq" class="section-pad bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-4">FAQs</h2>
-
-      <div class="accordion accordion-flush" id="faqAcc">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-              How do I book a cab?
-            </button>
-          </h2>
-          <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-            <div class="accordion-body">Book via call/WhatsApp or through our website. We’ll confirm instantly with all details.</div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
-              Are your prices fixed?
-            </button>
-          </h2>
-          <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-            <div class="accordion-body">Yes. We follow transparent, competitive pricing with no hidden charges.</div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
-              Do you provide drivers?
-            </button>
-          </h2>
-          <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-            <div class="accordion-body">Absolutely. We offer chauffeur-driven rides with verified & experienced drivers.</div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
-              Do you serve corporate & events?
-            </button>
-          </h2>
-          <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-            <div class="accordion-body">Yes—corporate tie-ups, wedding logistics, group tours & airport transfers.</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== CONTACT/ADDRESS + CTA ===== -->
-  <section id="contact" class="cta-strip">
-    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
-      <div>
-        <h5 class="mb-1">Registered Office</h5>
-        <p class="mb-0">A/106, Spring Dale's Society, Old Mundhwa Road, Near Oxygen Park,<br/>Kharadi – 411014, Pune, Maharashtra, India</p>
-      </div>
-      <a href="#fleet" class="btn btn-hero">Book Your Ride</a>
-    </div>
-  </section>
-
-    <!-- Modern Animated Footer -->
-  <footer class="site-footer">
+<!-- Modern Animated Footer -->
+  <footer class="site-footer" data-animate="flip-in-bottom">
     <div class="container">
       <div class="row">
 
@@ -480,7 +655,7 @@
         <div class="col-lg-2 col-md-6 mb-4">
           <h6 class="footer-title">Explore</h6>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="#fleet">Fleet</a></li>
             <li><a href="#services">Services</a></li>
@@ -504,10 +679,11 @@
           <h6 class="footer-title">Contact Us</h6>
           <ul class="footer-contact">
             <li><i class="fas fa-phone-alt"></i><a href="tel:+919373074747">+91 9373074747</a></li>
-            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/918888668881">+91 8888668881</a></li>
+            <li><i class="fas fa-phone-alt"></i><a href="tel:+918007883022">+91 8007883022</a></li>
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/918888668881">+91 8888668881 (WhatsApp)</a></li>
             <li><i class="fas fa-envelope"></i><a href="mailto:triptriangles@gmail.com">triptriangles@gmail.com</a></li>
-            <li><i class="fas fa-map-marker-alt"></i><a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8">A/106, Spring Dale's Society, Old Mundhwa Road, Near Oxygen Park, Kharadi – 411014, Pune, Maharashtra, India</a></li>
-            
+            <li><i class="fas fa-map-marker-alt"></i><a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8">A/106, Spring
+                Dale's Society, Old Mundhwa Road, Near Oxygen Park, Kharadi – 411014, Pune, Maharashtra, India</a></li>
           </ul>
 
           <!-- Social pulse icons -->
@@ -516,7 +692,7 @@
             <a href="https://www.facebook.com/share/1F9Rj1tZ5r/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://maps.app.goo.gl/1hMt3i4rN3D7mK5D8" target="_blank"><i
                 class="fas fa-map-marked-alt"></i></a>
-                
+
           </div>
         </div>
 
@@ -533,6 +709,7 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/about.js"></script>
+  <script src="js/custom_animation.js"></script>
    <script>
     //footer
     document.getElementById('year').textContent = new Date().getFullYear();
