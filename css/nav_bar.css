@@ -192,3 +192,363 @@
                 width: 100%;
             }
         }
+
+
+        /* footer code */
+                /* ---------- Footer Theme ---------- */
+:root {
+  --footer-bg: #0f0f0f;
+  --footer-txt: #f5f5f5;
+  --accent: #ffc107;
+  --accent2: #ff8c00;
+}
+
+.site-footer {
+  background: linear-gradient(135deg, var(--footer-bg) 0%, #1a1a1a 100%);
+  color: var(--footer-txt);
+  padding: 70px 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* animated diagonal glow */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 80%, var(--accent) 0%, transparent 40%);
+  opacity: .07;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Brand */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #000;
+}
+
+/* Titles */
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--accent);
+  position: relative;
+}
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent2);
+  transition: width .3s ease;
+}
+.footer-title:hover::after {
+  width: 70px;
+}
+
+/* Lists */
+.footer-links, .footer-contact {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li, .footer-contact li {
+  margin-bottom: 10px;
+}
+.footer-links a, .footer-contact a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color .3s, transform .3s;
+}
+.footer-links a:hover, .footer-contact a:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+.footer-contact i {
+  width: 20px;
+  margin-right: 8px;
+  color: var(--accent);
+}
+
+/* Social icons */
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #444;
+  color: #bbb;
+  transition: all .4s;
+}
+.footer-social a:hover {
+  background: var(--accent);
+  color: #000;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: .85rem;
+  color: #777;
+}
+.pulse-heart {
+  color: #ff4757;
+  animation: pulse 1.2s infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(1);   }
+  50%  { transform: scale(1.25); }
+  100% { transform: scale(1);   }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+
+/* Bring footer above ANYTHING */
+.site-footer {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* If a pseudo-element is still blocking, hide it */
+.site-footer::before,
+.site-footer::after {
+  pointer-events: none !important;
+}
+
+/* Make every link inside footer clickable */
+.site-footer * {
+  pointer-events: auto !important;
+}
+
+
+.floating-icons {
+  position: fixed;
+  right: 15px;   /* ✅ left ऐवजी right */
+  bottom: 20px;  /* ✅ screen end */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-icons img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+.floating-icons img:hover {
+  transform: scale(1.15);
+}
+
+
+/* custom Animation code */
+
+@keyframes bounceInSkew {
+    0% {
+        opacity: 0;
+        transform: skewX(-20deg) scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: skewX(10deg) scale(1.05);
+    }
+    80% {
+        transform: skewX(-5deg) scale(0.97);
+    }
+    100% {
+        transform: skewX(0deg) scale(1);
+    }
+}
+
+.bounce-in-skew {
+    animation: bounceInSkew 1s ease-out forwards;
+}
+
+
+@keyframes rotatePop {
+    0% {
+        opacity: 0;
+        transform: rotate(-90deg) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.rotate-pop {
+    animation: rotatePop 0.8s ease-out forwards;
+}
+
+@keyframes flipInBottom {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg) translateY(50px);
+        transform-origin: bottom;
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0);
+        transform-origin: bottom;
+    }
+}
+
+.flip-in-bottom {
+    animation: flipInBottom 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes elasticExpand {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.elastic-expand {
+    animation: elasticExpand 1s ease-out forwards;
+}
+
+@keyframes fadeSlideRotate {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) rotate(-5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+.fade-slide-rotate {
+    animation: fadeSlideRotate 0.9s ease-in-out forwards;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+        transform: scale(1.03);
+    }
+}
+
+.glow-pulse {
+    animation: glowPulse 2s infinite;
+}
+
+[data-animate] {
+    opacity: 0;
+}
+
+.bounce-in-skew,
+.flip-in-bottom,
+.elastic-expand,
+.fade-slide-rotate {
+    opacity: 1;
+}
+
+
+.row, .container, .service-card {
+  overflow: hidden;
+}
+
+/* -------------------------------------------------- */
+/* 1. Slide-up + fade (subtle, super common 2024)   */
+@keyframes slideUpFade {
+  0%   { opacity: 0; transform: translateY(40px) scale(.98); }
+  100% { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+.slide-up-fade { animation: slideUpFade .8s cubic-bezier(.25,.8,.25,1) forwards; }
+
+/* -------------------------------------------------- */
+/* 2. Slide-right staggered                           */
+@keyframes slideRightFade {
+  0%   { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0);    }
+}
+.slide-right-fade { animation: slideRightFade .7s ease-out forwards; }
+
+/* -------------------------------------------------- */
+/* 3. Blur-in (glass-morphism vibe)                   */
+@keyframes blurInFade {
+  0%   { opacity: 0; filter: blur(12px); }
+  100% { opacity: 1; filter: blur(0);    }
+}
+.blur-in-fade { animation: blurInFade .9s ease-out forwards; }
+
+/* -------------------------------------------------- */
+/* 4. Zoom-in twist                                   */
+@keyframes zoomTwistFade {
+  0%   { opacity: 0; transform: scale(.6) rotate(-8deg); }
+  100% { opacity: 1; transform: scale(1)  rotate(0);    }
+}
+.zoom-twist-fade { animation: zoomTwistFade .7s cubic-bezier(.34,1.56,.64,1) forwards; }
+
+/* -------------------------------------------------- */
+/* 5. Clip-path reveal (slice from center)            */
+@keyframes clipRevealFade {
+  0%   { opacity: 0; clip-path: inset(0 50% 0 50%); }
+  100% { opacity: 1; clip-path: inset(0 0 0 0);     }
+}
+.clip-reveal-fade { animation: clipRevealFade .9s ease-out forwards; }
+
+/* -------------------------------------------------- */
+
+
+/* -------------------------------------------------- */
+/* keep your global observer styles                   */
+/* [data-animate] { opacity: 0; }
+html, body { overflow-x: hidden; } */

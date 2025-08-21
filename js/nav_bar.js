@@ -1,29 +1,35 @@
- //navbar section js
-        // Sticky navbar on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+//footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+//custom animations
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const cls = el.getAttribute("data-animate");
+                const wait = parseInt(el.getAttribute("data-delay") || "0", 10);
+
+                setTimeout(() => {
+                    el.classList.add(cls);
+                }, wait);
+
+                observer.unobserve(el); // run once
             }
         });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Initialize animations after page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // You can add more initialization code here if needed
-        });
+    }, { threshold: 0.2 });
 
-    //footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
+});
+
+function shareNow() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      text: "Check this out!",
+      url: window.location.href
+    });
+  } else {
+    alert("Sharing not supported on this browser. Copy link: " + window.location.href);
+  }
+}
