@@ -33,3 +33,11 @@ function shareNow() {
     alert("Sharing not supported on this browser. Copy link: " + window.location.href);
   }
 }
+
+// Preloader functionality
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    setTimeout(function() {
+      preloader.classList.add('hidden');
+    }, 1500); // Adjust timing as needed
+  });
