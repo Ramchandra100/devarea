@@ -64,7 +64,7 @@
             position: relative;
             margin: 0 10px;
             opacity: 0;
-            animation: fadeIn 0.8s ease forwards;
+            animation: fadeIn 6s ease forwards;
             animation-delay: calc(0.2s * var(--i));
         }
         
