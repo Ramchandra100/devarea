@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1077,21 +1078,21 @@
 
 <body>
 
-<!-- Preloader -->
-<div class="preloader" id="preloader">
-  <div class="preloader-content">
-    <img src="images/preloader.webp" alt="Trip Triangles Logo" class="preloader-image">
-    <h6 style="color: gray;">Your Journey, Our Responsibility!!!</h6>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <img src="images/preloader.webp" alt="Trip Triangles Logo" class="preloader-image" loading="eager">
+      <h6 style="color: gray;">Your Journey, Our Responsibility!!!</h6>
+    </div>
   </div>
-</div>
 
   <!-- Navbar Section-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <!-- Brand/Logo -->
-      <a class="navbar-brand" href="index.html" data-animate="slide-up-fade" data-delay="2000">
+      <a class="navbar-brand" href="index.html" data-animate="slide-up-fade" data-delay="500">
         <div class="logo-placeholder">
-          <img src="images/logo_nav_bar.png" height="40px" alt="Trip Triangles Logo">
+          <img src="images/logo_nav_bar.png" height="40px" alt="Trip Triangles Logo" loading="lazy">
         </div>
         <div class="brand-text">
           <span class="company-name">Trip Triangles</span>
@@ -1106,10 +1107,10 @@
       </button>
 
       <!-- Navigation Links -->
-      <div class="collapse navbar-collapse" id="navbarNav" data-animate="slide-up-fade" data-delay="2000">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link"  href="index.html" style="--i:1">Home</a>
+            <a class="nav-link" href="index.html" style="--i:1">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html" style="--i:2">About Us</a>
@@ -1141,7 +1142,7 @@
     <div class="container">
       <div class="row align-items-center">
         <!-- Left Column - Content -->
-        <div class="col-lg-6 order-lg-1 order-2" data-animate="slide-up-fade" data-delay="1500">
+        <div class="col-lg-6 order-lg-1 order-2" data-animate="slide-up-fade" data-delay="1000">
           <div class="hero-content">
             <h1 class="hero-title">Professional, Verified Travel & Tour Services Built for Every Mile of Your
               <span>Journey.</span>
@@ -1151,16 +1152,17 @@
               relaxing with your loved ones.</p>
 
             <div class="hero-buttons">
-              <a href="tel:+919373074747" class="btn btn-rent"><span class="fas fa-phone-alt me-2"></span>Travel Starts
+              <a href="tel:+919373074747" class="btn btn-rent" data-animate="elastic-expand" data-delay="1600"><span
+                  class="fas fa-phone-alt me-2"></span>Travel Starts
                 Here</a>
             </div>
           </div>
         </div>
 
         <!-- Right Column - Car Image -->
-        <div class="col-lg-6 order-lg-2 order-1" data-animate="elastic-expand" data-delay="1500">
+        <div class="col-lg-6 order-lg-2 order-1" data-animate="elastic-expand" data-delay="1000">
           <div class="hero-image-container">
-            <img src="images/hero_section_car.webp" alt="Luxury Car" class="hero-image">
+            <img src="images/hero_section_car.webp" alt="Luxury Car" class="hero-image" loading="eager">
           </div>
         </div>
       </div>
@@ -1173,7 +1175,7 @@
     <div class="container">
       <!-- Our Mission Subsection -->
       <div class="row align-items-center mission-section">
-        <div class="col-lg-6 order-lg-1 order-2" data-animate="slide-right-fade">
+        <div class="col-lg-6 order-lg-1 order-2" data-animate="slide-right-fade" data-delay="200">
           <div class="about-content">
             <h2 class="section-title"><span style="color: black;">Our</span> <span>Mission</span></h2>
             <p class="about-text">
@@ -1191,12 +1193,11 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 order-lg-2 order-1" data-animate="slide-up-fade" data-aos-delay="500">
+        <div class="col-lg-6 order-lg-2 order-1" data-animate="slide-up-fade" data-delay="500">
           <div class="about-image mission-image">
             <div class="blob-shape">
-              <img
-                src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                alt="Our Mission" class="img-fluid" data-aos="fade-left" loading="lazy">
+              <img src="images/about_us1.webp" alt="Our Mission" class="img-fluid" data-animate="slide-up-fade"
+                loading="lazy">
             </div>
           </div>
         </div>
@@ -1207,9 +1208,7 @@
         <div class="col-lg-6" data-animate="slide-up-fade">
           <div class="about-image story-image">
             <div class="blob-shape">
-              <img
-                src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                alt="Our Story" class="img-fluid" loading="lazy">
+              <img src="images/about_us2.webp" alt="Our Story" class="img-fluid" loading="lazy">
             </div>
           </div>
         </div>
@@ -1225,7 +1224,8 @@
             </p>
             <div class="founder-signature text-center">
               <p class="founder-name">Swapnil Adhao, Founder</p>
-              <img src="images/signature.png" width="150px" alt="Signature" class="signature" loading="lazy">
+              <img src="images/signature.png" width="150px" alt="Signature" class="signature" loading="lazy"
+                data-animate="slide-up-fade" data-delay="500">
             </div>
           </div>
         </div>
@@ -1489,20 +1489,28 @@
 
   <!-- ===== Trusted By Brands Strip ===== -->
   <section class="brand-strip">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">We <span>Work With</span></h2>
+      </div>
+    </div>
     <div class="brand-ticker">
-      <span>Infosys</span>
-      <span>Tech</span>
-      <span>Cybage</span>
-      <span>Kirloskar</span>
-      <span>Mahindra</span>
-      <span>TATA Motors</span>
+      <span><img src="images/brand_infosys.webp" height="40px" alt="brand infosys" loading="lazy"></span>
+      <span><img src="images/brand_cybage.webp" height="40px" alt="brand cybage" loading="lazy"></span>
+      <span><img src="images/brand_kirloshar.webp" height="50px" alt="brand kirloshar" loading="lazy"></span>
+      <span><img src="images/brand_mahindra.webp" height="40px" alt="brand mahindra" loading="lazy"></span>
+      <span><img src="images/brand_tata_moters.webp" height="40px" alt="brand tata moters" loading="lazy"></span>
       <!-- duplicate once for seamless loop -->
-      <span>Infosys</span>
-      <span>Tech</span>
-      <span>Cybage</span>
-      <span>Kirloskar</span>
-      <span>Mahindra</span>
-      <span>TATA Motors</span>
+      <span><img src="images/brand_infosys.webp" height="40px" alt="brand infosys" loading="lazy"></span>
+      <span><img src="images/brand_cybage.webp" height="40px" alt="brand cybage" loading="lazy"></span>
+      <span><img src="images/brand_kirloshar.webp" height="50px" alt="brand kirloshar" loading="lazy"></span>
+      <span><img src="images/brand_mahindra.webp" height="40px" alt="brand mahindra" loading="lazy"></span>
+      <span><img src="images/brand_tata_moters.webp" height="40px" alt="brand tata moters" loading="lazy"></span>
+      <span><img src="images/brand_infosys.webp" height="40px" alt="brand infosys" loading="lazy"></span>
+      <span><img src="images/brand_cybage.webp" height="40px" alt="brand cybage" loading="lazy"></span>
+      <span><img src="images/brand_kirloshar.webp" height="50px" alt="brand kirloshar" loading="lazy"></span>
+      <span><img src="images/brand_mahindra.webp" height="40px" alt="brand mahindra" loading="lazy"></span>
+      <span><img src="images/brand_tata_moters.webp" height="40px" alt="brand tata moters" loading="lazy"></span>
     </div>
   </section>
 
@@ -1560,7 +1568,8 @@
 
         <!-- Review 3 -->
         <div class="col-lg-4 col-md-6">
-          <div class="testimonial-card" data-animate="blur-in-fade" data-delay="200" onclick="window.location.href='https://maps.app.goo.gl/k2tqeCczuosdJHeH8';">
+          <div class="testimonial-card" data-animate="blur-in-fade" data-delay="200"
+            onclick="window.location.href='https://maps.app.goo.gl/k2tqeCczuosdJHeH8';">
             <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
             <div class="stars">★★★★☆</div>
             <p class="review-text">
@@ -1571,8 +1580,7 @@
               The best travel company in Pune. ”
             </p>
             <div class="client-info">
-              <img src="images/testimonials/cx3.jpeg" alt="Client" class="avatar"
-                 loading="lazy">
+              <img src="images/testimonials/cx3.jpeg" alt="Client" class="avatar" loading="lazy">
               <div>
                 <h6>Sadhana Patil</h6>
                 <span>Traveller</span>
@@ -1853,34 +1861,34 @@
     </div>
   </footer>
 
-    <!-- Floating Social Icons -->
+  <!-- Floating Social Icons -->
   <div class="floating-icons">
     <!-- WhatsApp -->
-    <a href="https://wa.me/918888668881" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/918888668881" target="_blank" title="Chat on WhatsApp" data-animate="bounce-in-skew"
+      data-delay="1000">
       <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
     </a>
 
     <!-- Call -->
-    <a href="tel:+918888668881" title="Call Now">
+    <a href="tel:+918888668881" title="Call Now" data-animate="bounce-in-skew" data-delay="1200">
       <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
     </a>
 
     <!-- Instagram -->
-    <a href="https://www.instagram.com/triptriangles_" target="_blank" title="Instagram">
+    <a href="https://www.instagram.com/triptriangles_" target="_blank" title="Instagram" data-animate="bounce-in-skew"
+      data-delay="1400">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
     </a>
 
     <!-- Share -->
-    <a href="javascript:void(0);" onclick="shareNow()" title="Share">
+    <a href="javascript:void(0);" onclick="shareNow()" title="Share" data-animate="bounce-in-skew" data-delay="1600">
       <img src="https://cdn-icons-png.flaticon.com/512/786/786205.png" alt="Share">
     </a>
   </div>
 
-
   <script src="js/nav_bar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  
 
 </body>
 
-</html> 
+</html>

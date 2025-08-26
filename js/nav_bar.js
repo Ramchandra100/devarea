@@ -39,5 +39,5 @@ function shareNow() {
     const preloader = document.getElementById('preloader');
     setTimeout(function() {
       preloader.classList.add('hidden');
-    }, 1500); // Adjust timing as needed
+    }, 500); // Adjust timing as needed
   });

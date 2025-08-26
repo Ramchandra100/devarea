@@ -64,7 +64,7 @@
             position: relative;
             margin: 0 10px;
             opacity: 0;
-            animation: fadeIn 6s ease forwards;
+            animation: fadeIn 0.3s ease forwards;
             animation-delay: calc(0.2s * var(--i));
         }
         
@@ -87,7 +87,7 @@
             width: 100%;
         }
         
-        .dropdown-menu {
+        /* .dropdown-menu {
             background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(10px);
             border: none;
@@ -104,7 +104,7 @@
             background: rgba(255, 193, 7, 0.2);
             color: var(--primary-color) !important;
             padding-left: 20px;
-        }
+        } */
         
         .btn-signin {
             border: 1px solid white;
