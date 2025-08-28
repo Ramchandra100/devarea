@@ -967,7 +967,7 @@
     /* ---------- CTA Banner ---------- */
     .cta-banner {
       position: relative;
-      padding: 75px 20px;
+      padding: 70px 20px;
       overflow: hidden;
       background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
       color: #fff;
@@ -980,6 +980,9 @@
     @media (max-width: 767px) {
       .cta-banner img {
         width: 270px;
+      }
+      .btn-cta {
+        font-size: 0.5rem;
       }
     }
 
@@ -1026,13 +1029,13 @@
     } */
 
     .btn-cta {
-      display: inline-flex;
+      /* display: inline-flex; */
       align-items: center;
       background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
       color: #000;
       font-weight: 700;
-      font-size: 1.1rem;
-      padding: 16px 40px;
+      font-size: 1rem;
+      padding: 10px 40px;
       border-radius: 50px;
       text-decoration: none;
       box-shadow: 0 8px 25px rgba(255, 140, 0, .35);
@@ -1066,7 +1069,7 @@
     }
 
     /* Responsive */
-    @media (max-width: 767px) {
+    @media (max-width: 767px), (max-width: 320px) {
       .cta-tagline {
         font-size: 1.8rem;
       }
@@ -1076,8 +1079,11 @@
       }
 
       .btn-cta {
-        font-size: 1rem;
-        padding: 14px 30px;
+        font-size: 0.7rem;
+        padding: 10px 30px;
+      }
+      .cta-banner {
+        padding: 20px 20px;
       }
     }
 
@@ -1971,9 +1977,11 @@
       <img src="images/Text_logo_white.webp" alt="" loading="lazy">
       <!-- <h2 class="cta-tagline">Your Journey, <span>Our Responsibility!!!</span></h2>
       <p class="cta-subtext">Fast, safe & reliable rides—anytime, anywhere.</p> -->
-      <a href="tel:+918888668881" class="btn-cta pulse my-4 d-block">
+      <div class="row justify-content-center">
+        <a href="tel:+918888668881" class="btn-cta pulse my-4 d-block col-6">
         <i class="fas fa-phone me-2"></i>Book Now
       </a>
+      </div>
     </div>
   </section>
 
