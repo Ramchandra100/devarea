@@ -532,7 +532,7 @@
   0%   { opacity: 0; filter: blur(12px); }
   100% { opacity: 1; filter: blur(0);    }
 }
-.blur-in-fade { animation: blurInFade .7s ease-out forwards; }
+.blur-in-fade { animation: blurInFade .9s ease-out forwards; }
 
 /* -------------------------------------------------- */
 /* 4. Zoom-in twist                                   */

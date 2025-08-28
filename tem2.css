@@ -27,278 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="css/nav_bar.css">
   <style>
-   /* Hero Section */
-    .hero {
-      padding-top: 15px;
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-    }
-    @media (max-width: 767.98px) {
-      .hero {
-        padding-top: 0%;
-      }
-      .hero-content-container{
-        height: auto;
-      }
-    }
 
-    .hero-content-container {
-      position: relative;
-      width: 100%;
-      height: 120vh;
-    }
-
-
-    .hero-variant {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.8s ease, visibility 0.8s ease;
-      padding: 0 15px;
-    }
-
-    .hero-variant.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .boxt-text-img {
-      flex-direction: column;
-    }
-
-    /* .hero-content {
-      padding: 120px 0;
-    } */
-
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      color: white;
-      line-height: 1.2;
-    }
-
-    .hero-title span {
-      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-subtitle {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-    }
-
-    .hero-text {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1.2rem;
-      margin-bottom: 0.8rem;
-      line-height: 1.6;
-    }
-
-    .hero-buttons {
-      margin-top: 2rem;
-    }
-
-    .btn-rent {
-      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-      color: var(--dark-color) !important;
-      font-weight: 600;
-      padding: 12px 30px;
-      border-radius: 50px;
-      border: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
-    }
-
-    .btn-rent:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
-    }
-
-    /* Hero Image */
-    .hero-image-container {
-      position: relative;
-      text-align: center;
-    }
-
-    .hero-image {
-      max-width: 500px;
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); */
-      /* transform: perspective(1000px) rotateY(-10deg); */
-      /* transition: transform 0.5s ease; */
-    }
-
-    /* .hero-image-container:hover .hero-image {
-      transform: perspective(1000px) rotateY(-5deg) scale(1.02);
-    } */
-
-    /* Variant Controls */
-    .variant-controls {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      display: flex;
-      gap: 15px;
-    }
-  
-
-    .variant-control {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-    }
-
-    .variant-control.active {
-      background: var(--primary-color);
-      transform: scale(1.3);
-      border-color: white;
-    }
-
-    /* Navigation Arrows */
-    .nav-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .nav-arrow:hover {
-      background: var(--primary-color);
-      color: black;
-      border-color: var(--primary-color);
-      transform: translateY(-50%) scale(1.1);
-    }
-
-    .nav-arrow-left {
-      left: 20px;
-    }
-
-    .nav-arrow-right {
-      right: 20px;
-    }
-
-    .nav-arrow i {
-      font-size: 24px;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fadein {
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 991.98px) {
-      .hero-title {
-        font-size: 2.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.8rem;
-      }
-
-      .hero-content {
-        padding: 100px 0 60px;
-      }
-
-      .nav-arrow {
-        width: 40px;
-        height: 40px;
-      }
-
-      .nav-arrow i {
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 767.98px) {
-      .hero-title {
-        font-size: 2.2rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.6rem;
-      }
-
-      .hero-text {
-        font-size: 1.1rem;
-      }
-
-      /* .hero-image {
-        margin-top: 30px;
-        transform: perspective(1000px) rotateY(0);
-        height: 200px;
-      } */
-
-      .variant-controls {
-        bottom: 20px;
-      }
-
-      .nav-arrow {
-        width: 35px;
-        height: 35px;
-        top: auto;
-        bottom: 90px;
-        transform: none;
-      }
-
-      .nav-arrow-left {
-        left: 10px;
-      }
-
-      .nav-arrow-right {
-        right: 10px;
-      }
-
-      .nav-arrow:hover {
-        transform: scale(1.1);
-      }
-    }
 
 
     /* About Us Section CSS */
@@ -1132,9 +861,6 @@
 </head>
 
 <body>
-  <!-- Bootstrap & jQuery for hero -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 
   <!-- Preloader -->
   <div class="preloader" id="preloader">
@@ -1182,13 +908,13 @@
           <li class="nav-item">
             <a class="nav-link" href="our_packages.html" style="--i:5">Our Packages</a>
           </li>
-          <li class="nav-item remove">
+          <li class="nav-item">
             <a class="nav-link" href="faq.html" style="--i:6">FAQs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="gallery.html" style="--i:7">Gallery</a>
           </li>
-          <li class="nav-item remove">
+          <li class="nav-item">
             <a class="nav-link" href="contact_us.html" style="--i:8">Contact Us</a>
           </li>
         </ul>
@@ -1201,144 +927,100 @@
     </div>
   </nav>
 
-
-    <!-- Hero Section with Replaceable Content -->
-  <section class="hero ">
-    <!-- Navigation Arrows -->
-    <div class="nav-arrow nav-arrow-left">
-      <i class="fas fa-chevron-left"></i>
-    </div>
-
-    <div class="nav-arrow nav-arrow-right">
-      <i class="fas fa-chevron-right"></i>
-    </div>
-
-    <div class="hero-content-container">
-      <!-- Variant 1 -->
-      <div class="hero-variant active" id="variant1">
-        <div class="container ">
-          <div class="row align-items-center boxt-text-img">
-
-            <div class=" order-1">
-              <div class="hero-image-container">
-                <img src="images/pngs/group_car.png" alt="Self Drive Car" class="hero-image" style="max-width: 1000px;">
-              </div>
-
-              <div class="col-lg-12 order-lg-1 order-2 text-center">
-                <div class="hero-content">
-                  <h2 class="hero-subtitle">Safe, Comfortable, And Memorable Journeys</h2>
-                  <h1 class="hero-title">Easy, Convenient, and Hassle-Free.</h1>
-                  <p class="hero-text">Discover reliable cab rentals, corporate bookings, and outstation trips with peace of mind.</p>
-                  <p class="hero-text"></p>
-                  <p class="hero-text">Anytime</p>
-                  <div class="hero-buttons py-3">
-                    <a href="tel:+919373074747" class="btn btn-rent">
-                      <span class="fas fa-car me-2"></span>Book Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- ========== NEW HERO SECTION ========== -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <!-- left text -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="hero-headline">
+          Your Freedom to<br>
+          <span class="text-warning">Drive Awaits!</span>
+        </h1>
+        <p class="hero-subtext mt-3 mb-4">
+          Choose from a wide range of self-drive cars.<br>
+          Flexible, convenient, and hassle-free.<br>
+          Anytime, Anywhere.
+        </p>
+        <a href="tel:+918888668881" class="btn btn-lg btn-warning text-dark fw-bold px-4 py-2">
+          Book Now
+        </a>
       </div>
 
-      <!-- Variant 2 -->
-      <div class="hero-variant" id="variant2">
-        <div class="container ">
-          <div class="row align-items-center boxt-text-img">
-
-            <div class=" order-1">
-              <div class="hero-image-container">
-                <img src="images/pngs/innova.webp" alt="Self Drive Car" class="hero-image">
-              </div>
-
-              <div class="col-lg-12 order-lg-1 order-2 text-center">
-                <div class="hero-content">
-                  <h2 class="hero-subtitle">Safe, Comfortable, And Memorable Journeys</h2>
-                  <h1 class="hero-title">Easy, Convenient, and Hassle-Free.</h1>
-                  <p class="hero-text">Discover reliable cab rentals, corporate bookings, and outstation trips with peace of mind.</p>
-                  <p class="hero-text"></p>
-                  <p class="hero-text">Anytime</p>
-                  <div class="hero-buttons py-3">
-                    <a href="tel:+919373074747" class="btn btn-rent">
-                      <span class="fas fa-car me-2"></span>Book Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Variant 3 -->
-      <div class="hero-variant" id="variant3">
-        <div class="container ">
-          <div class="row align-items-center boxt-text-img">
-
-            <div class=" order-1">
-              <div class="hero-image-container">
-                <img src="images/pngs/bus.png" alt="Self Drive Car" class="hero-image">
-              </div>
-
-              <div class="col-lg-12 order-lg-1 order-2 text-center">
-                <div class="hero-content">
-                  <h2 class="hero-subtitle">Safe, Comfortable, And Memorable Journeys</h2>
-                  <h1 class="hero-title">Easy, Convenient, and Hassle-Free.</h1>
-                  <p class="hero-text">Discover reliable cab rentals, corporate bookings, and outstation trips with peace of mind.</p>
-                  <p class="hero-text"></p>
-                  <p class="hero-text">Anytime</p>
-                  <div class="hero-buttons py-3">
-                    <a href="tel:+919373074747" class="btn btn-rent">
-                      <span class="fas fa-car me-2"></span>Book Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Variant 4 -->
-      <div class="hero-variant" id="variant4">
-        <div class="container ">
-          <div class="row align-items-center boxt-text-img">
-
-            <div class=" order-1">
-              <div class="hero-image-container">
-                <img src="images/pngs/ertiga.png" alt="Self Drive Car" class="hero-image">
-              </div>
-
-              <div class="col-lg-12 order-lg-1 order-2 text-center">
-                <div class="hero-content">
-                  <h2 class="hero-subtitle">Safe, Comfortable, And Memorable Journeys</h2>
-                  <h1 class="hero-title">Easy, Convenient, and Hassle-Free.</h1>
-                  <p class="hero-text">Discover reliable cab rentals, corporate bookings, and outstation trips with peace of mind.</p>
-                  <p class="hero-text"></p>
-                  <p class="hero-text">Anytime</p>
-                  <div class="hero-buttons py-3">
-                    <a href="tel:+919373074747" class="btn btn-rent">
-                      <span class="fas fa-car me-2"></span>Book Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- right sliding image -->
+      <div class="col-lg-6">
+        <div class="hero-image-wrapper">
+          <img src="images/fleet/ertiga.webp" alt="Self-drive car" class="hero-img active">
+          <img src="images/fleet/ciaz.webp" alt="Self-drive car" class="hero-img">
+          <img src="images/fleet/dzire.webp" alt="Self-drive car" class="hero-img">
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Variant Controls -->
-    <div class="variant-controls">
-      <div class="variant-control active" data-variant="variant1"></div>
-      <div class="variant-control" data-variant="variant2"></div>
-      <div class="variant-control" data-variant="variant3"></div>
-      <div class="variant-control" data-variant="variant4"></div>
-    </div>
-  </section>
+<style>
+/* ===== Hero CSS ===== */
+.hero {
+  background: linear-gradient(135deg, #111 0%, #222 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-headline {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-subtext {
+  font-size: 1.25rem;
+  color: #ccc;
+}
+
+/* image slider container */
+.hero-image-wrapper {
+  position: relative;
+  height: 400px;          /* adjust to taste */
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-img.active {
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .hero-headline { font-size: 2.5rem; }
+  .hero-subtext  { font-size: 1.1rem; }
+  .hero-image-wrapper { height: 300px; }
+}
+</style>
+
+<script>
+/* ===== Hero image carousel ===== */
+(function () {
+  const images = document.querySelectorAll('.hero-img');
+  let idx = 0;
+
+  function next() {
+    images[idx].classList.remove('active');
+    idx = (idx + 1) % images.length;
+    images[idx].classList.add('active');
+  }
+
+  setInterval(next, 3000);   // 3-second cycle
+})();
+</script>
 
 
   <!-- About Us Section -->
@@ -1363,7 +1045,7 @@
         <div class="col-lg-6 order-lg-2 order-1" data-animate="slide-up-fade" data-delay="500">
           <div class="about-image mission-image">
             <div class="blob-shape">
-              <img src="images/our_mission.webp" alt="Our Story" class="img-fluid" loading="lazy">
+              <img src="images/about_us2.webp" alt="Our Story" class="img-fluid" loading="lazy">
             </div>
           </div>
         </div>
@@ -1374,7 +1056,7 @@
         <div class="col-lg-6" data-animate="slide-up-fade">
           <div class="about-image story-image">
             <div class="blob-shape">
-              <img src="images/about_us.webp" alt="Our Story" class="img-fluid" loading="lazy">
+              <img src="images/about_us2.webp" alt="Our Story" class="img-fluid" loading="lazy">
             </div>
           </div>
         </div>
@@ -1941,7 +1623,7 @@
   <!-- ===== CTA Banner ===== -->
   <section class="cta-banner" data-animate="slide-up-fade">
     <div class="container text-center">
-      <img src="images/Text_logo_white.webp" alt="" loading="lazy" >
+      <img src="images/Text_logo_white.png" alt="" loading="lazy" >
       <!-- <h2 class="cta-tagline">Your Journey, <span>Our Responsibility!!!</span></h2>
       <p class="cta-subtext">Fast, safe & reliable rides—anytime, anywhere.</p> -->
       <a href="tel:+918888668881" class="btn-cta pulse my-4 d-block">
@@ -2044,83 +1726,7 @@
 
   <script src="js/nav_bar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      const variants = $('.hero-variant');
-      const controls = $('.variant-control');
-      let currentVariant = 'variant1';
-      let variantInterval;
 
-      // Function to show a specific variant
-      function showVariant(variantId) {
-        variants.removeClass('active');
-        controls.removeClass('active');
-
-        $(`#${variantId}`).addClass('active');
-        $(`.variant-control[data-variant="${variantId}"]`).addClass('active');
-
-        currentVariant = variantId;
-      }
-
-      // Function to go to next variant
-      function nextVariant() {
-        const currentIndex = parseInt(currentVariant.replace('variant', '')) - 1;
-        const nextIndex = (currentIndex + 1) % variants.length;
-        showVariant(`variant${nextIndex + 1}`);
-      }
-
-      // Function to go to previous variant
-      function prevVariant() {
-        const currentIndex = parseInt(currentVariant.replace('variant', '')) - 1;
-        const prevIndex = (currentIndex - 1 + variants.length) % variants.length;
-        showVariant(`variant${prevIndex + 1}`);
-      }
-
-      // Set up automatic variant rotation
-      function startVariantRotation() {
-        variantInterval = setInterval(nextVariant, 6000); // Change variant every 6 seconds
-      }
-
-      // Event listeners for controls
-      controls.each(function () {
-        $(this).on('click', function () {
-          clearInterval(variantInterval);
-          const variantId = $(this).data('variant');
-          showVariant(variantId);
-          startVariantRotation();
-        });
-      });
-
-      // Event listeners for navigation arrows
-      $('.nav-arrow-left').on('click', function () {
-        clearInterval(variantInterval);
-        prevVariant();
-        startVariantRotation();
-      });
-
-      $('.nav-arrow-right').on('click', function () {
-        clearInterval(variantInterval);
-        nextVariant();
-        startVariantRotation();
-      });
-
-      // Keyboard navigation
-      $(document).on('keydown', function (e) {
-        if (e.key === 'ArrowLeft') {
-          clearInterval(variantInterval);
-          prevVariant();
-          startVariantRotation();
-        } else if (e.key === 'ArrowRight') {
-          clearInterval(variantInterval);
-          nextVariant();
-          startVariantRotation();
-        }
-      });
-
-      // Start the variant rotation
-      startVariantRotation();
-    });
-  </script>
 
 </body>
 
