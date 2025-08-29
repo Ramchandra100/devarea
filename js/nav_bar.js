@@ -39,7 +39,7 @@ window.addEventListener('load', function () {
   const preloader = document.getElementById('preloader');
   setTimeout(function () {
     preloader.classList.add('hidden');
-  }, 2500); // Adjust timing as needed
+  }, 900); // Adjust timing as needed
 });
 
 
@@ -48,6 +48,6 @@ const yellow = document.querySelector('.yellow');
 const blue = document.querySelector('.blue');
 const pink = document.querySelector('.pink');
 
-setTimeout(() => yellow.classList.add('show'), 300);
-setTimeout(() => blue.classList.add('show'), 900);
-setTimeout(() => pink.classList.add('show'), 1500);
+setTimeout(() => yellow.classList.add('show'), 100);
+setTimeout(() => blue.classList.add('show'), 300);
+setTimeout(() => pink.classList.add('show'), 500);
