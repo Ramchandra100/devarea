@@ -40,25 +40,38 @@
       background: #f5f5f5;
     }
 
-    /* Hero Section */
-    .hero {
+
+    /* ===== HERO SECTION ===== */
+        .hero-section {
+      background:  url('images/car_images/faq_hero.webp') center/contain no-repeat;
+      height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
       position: relative;
-      background: url('images/car_images/faq_hero.webp') center/contain no-repeat;
-      padding: 130px 0;
-      color: #fff;
     }
 
-    .hero::after {
+    .hero-section::before {
       content: "";
       position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
-    .hero .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
+    .hero-section > div {
+      background-color: rgba(0, 0, 0, 0.541);
+      border-radius: 20px;
+      padding: 1rem;
+      position: absolute;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 3rem;
+      bottom: 10px;
+      z-index: 1;
     }
 
     /* ---------- FAQ Section ---------- */
@@ -196,12 +209,13 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" data-animate="slide-right-fade">
-    <div class="hero-content container"
-      style="font-family: 'Times New Roman', Times, serif; background-color: rgba(0, 0, 0, 0.534); border-radius: 10px;">
-      <h1 class="display-4 fw-bold" data-animate="slide-right-fade" data-delay="100">Frequently Asked Questions</h1>
-      <p class="lead" data-animate="slide-right-fade" data-delay="200">Here are answers to the most common queries about
-        Trip Triangles services</p>
+
+
+  <section class="hero-section">
+    <div>
+      <h1>Frequently Asked Questions</h1>
+    <h3>Here are answers to the most common queries about
+        Trip Triangles services</h3>
     </div>
   </section>
 
