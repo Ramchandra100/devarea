@@ -440,8 +440,9 @@
 
 .floating-icons a {
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 20%;
   padding: 8px;
+  width: 40px;
   color: #25D366;
 }
 
@@ -450,10 +451,15 @@
   /* transform: translateX(1px); */
 }
 
-.floating-icons .fa-phone {
+.floating-icons .fa-phone{
   color: #0a66c2;
-  font-size: 20px;
-  transform: translateX(2px);
+  font-size: 18px;
+  transform: translateX(4px);
+}
+.floating-icons .fa-whatsapp{
+  /* color: #D44638; */
+  font-size: 25px;
+  transform: translateX(1.5px);
 }
 
 
@@ -745,8 +751,8 @@ html, body { overflow-x: hidden; } */
 /* preloader css svg code */
 .preloader-svg {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
 
 
@@ -766,34 +772,34 @@ html, body { overflow-x: hidden; } */
 }
 
 .yellow {
-  transform: translateX(70px);
+  transform: translateX(40px);
 }
 
 .blue {
-  transform: translate(10px, 78px);
+  transform: translate(10px, 39px);
 
 }
 
 .pink {
-  transform: translateX(-50px);
+  transform: translateX(-20px);
 }
 
 @media (max-width: 767.98px) {
   .preloader-svg {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
   }
 
   .yellow {
-    transform: translateX(40px);
+    transform: translateX(25px);
   }
 
   .blue {
-    transform: translate(10px, 38px);
+    transform: translate(2px, 30px);
 
   }
 
   .pink {
-    transform: translateX(-20px);
+    transform: translateX(-22px);
   }
 }
